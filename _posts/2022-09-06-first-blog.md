@@ -6,18 +6,18 @@ author: RuntimeEroor
 categories: jekyll
 tags: jekyll
 ---
-# GitHub Pages
+## GitHub Pages
 
 没什么可说的。
 
-# 下载模板
+## 下载模板
 
 `git clone https://github.com/jeffreytse/jekyll-theme-yat`
 
-# 略作修改
+## 略作修改
 
 删去丑陋的快速到顶部，深色模式切换；切换背景图片，添加图标，减小banner宽度。换上美好的等宽字体。
 
-# 发布文章
+## 发布文章
 
 在 `_posts`新增Markdown文件就行了。
