@@ -100,8 +100,16 @@
           })();
         </script>
       {%- else -%}
-        <div style="background-image: url({{ banner_image }})"></div>
-        <img class="img-placeholder" src="{{ banner_image }}">
+      <svg width="100%" height="100%">
+        <defs>
+            <linearGradient id="grad1">
+                <stop stop-color="#27ae60" offset="0%"></stop>
+                <stop stop-color="#16a085" offset="50%"></stop>
+                <stop stop-color="#34495e" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grad1)"></rect>
+      </svg>
       {%- endif -%}
     </div>
     <div class="wrapper">
