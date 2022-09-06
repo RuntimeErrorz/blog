@@ -1,0 +1,9 @@
+---
+layout: post
+title: Typescript入门
+subtitle: 大疆实训任务
+author: RuntimeEroor
+categories: 前端
+tags: Three.js
+---
+# To be continued!
