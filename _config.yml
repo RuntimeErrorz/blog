@@ -40,7 +40,7 @@ author: RuntimeErroz
 #   "Copyright (c) 2017-{currentYear} <a href="https://example.com">{author}</a>"
 #   "Copyright © 2017-2021 Foobar"
 #
-copyright: "{currentYear} (cleft) {author} 电子科技大学信息与软件工程学院 | {zdyjackpot@gmail.com}"
+copyright: "{currentYear} (cleft) {author} 电子科技大学信息与软件工程学院 | {email}"
 
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
