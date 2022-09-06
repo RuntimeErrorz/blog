@@ -1,17 +1,15 @@
-@charset "UTF-8";
-
 @font-face {
-  font-family: "Fira Code Web";
-  src: url("/blog/assets/webfonts/FiraCode-Regular.woff2") format("woff2"), url("/blog/assets/webfonts/FiraCode-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal
+    font-family: "Fira Code Web";
+    src: url("/blog/assets/webfonts/FiraCode-Regular.woff2") format("woff2"), url("/blog/assets/webfonts/FiraCode-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal
 }
 
 @font-face {
-  font-family: "Fira Code Web";
-  src: url("/blog/assets/webfonts/FiraCode-Bold.woff2") format("woff2"), url("/blog/assets/webfonts/FiraCode-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal
+    font-family: "Fira Code Web";
+    src: url("/blog/assets/webfonts/FiraCode-Bold.woff2") format("woff2"), url("/blog/assets/webfonts/FiraCode-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal
 }
 
 /** Reset some basic elements */
@@ -367,7 +365,7 @@ html[data-scroll-status='down'] .framework .sidebar {
 
 .site-brand .site-brand-inner .site-favicon {
   display: inline-block;
-  height: 1.33rem;
+  height: 3.33rem;
   margin-right: .3rem;
 }
 
