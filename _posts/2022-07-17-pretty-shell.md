@@ -6,22 +6,22 @@ author: RuntimeEroor
 categories: 软件配置
 tags: Powershell
 ---
-# 安装Nerd字体
+## 安装Nerd字体
 
 这个应该没什么难度。
 
-# 安装新款 Powershell Core
+## 安装新款 Powershell Core
 
 [下载地址](https://github.com/PowerShell/PowerShell/releases)
 
-# 安装Powershell插件
+## 安装Powershell插件
 
 ```powershell
 winget install JanDeDobbeleer.OhMyPosh
 Install-Module -Name PSReadLine  -Scope CurrentUser
 ```
 
-### 配置 PowerShell
+## 配置 PowerShell
 
 在Powershell中输入 `code $PROFILE`打开profile script。
 输入以下代码，有注释应该很好懂。
@@ -111,7 +111,7 @@ Set-Alias -Name cd -Value Change-Directory -Option AllScope
 clear
 ```
 
-# 配置Windows Terminal
+## 配置Windows Terminal
 
 ```json
 "profiles": 
