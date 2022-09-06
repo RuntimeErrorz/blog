@@ -1,0 +1,105 @@
+I"�*<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">App.vue</code>中的三个标签：</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">&lt;template&gt;</code>包含了所有的标记结构和组件的展示逻辑。template 可以包含任何合法的 HTML，以及 Vue 特定的语法。来看一个初始项目的例子：<code class="language-plaintext highlighter-rouge">&lt;HelloWorld msg="Welcome to Yossur Vue.js App"/&gt;</code>，这个实际上是一个从 <code class="language-plaintext highlighter-rouge">HelloWorld.vue</code>传来的子级的组件。并且这样是向prop传入一个静态的值。</li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">&lt;script&gt;</code>包含组件中所有的非显示逻辑，最重要的是， <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> 标签需要默认导出一个 JS 对象。该对象是您在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个对象会被处理和转换（包含 template 模板）成为一个有 <code class="language-plaintext highlighter-rouge">render()</code> 函数的 Vue 组件。接下来看一个初始项目的例子：</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">HelloWorld</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./components/HelloWorld.vue</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app</span><span class="dl">'</span><span class="p">,</span> <span class="c1">//注册一个组件</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">HelloWorld</span><span class="c1">//注册一个子级别组件</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>        </div>
+
+        <p>其中值得注意的是ES6的新语法 <code class="language-plaintext highlighter-rouge">import/export</code>，<code class="language-plaintext highlighter-rouge">export default</code>默认只能导出一个，所以说名字是想导入的文件取的。</p>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>包括CSS代码，而且开始项目的 <code class="language-plaintext highlighter-rouge">&lt;style scoped&gt;</code>会使Vue 会把样式的范围限制到单文件组件的内容里。</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">components</code>文件夹中的 <code class="language-plaintext highlighter-rouge">HelloWorld.vue</code>：</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code>：使用“Mustache” (双大括号) 语法的文本插值，Mustache 标签将会被替代为对应组件实例中 <code class="language-plaintext highlighter-rouge">msg</code> property 的值。无论何时，绑定的组件实例上 <code class="language-plaintext highlighter-rouge">msg</code> property 发生了改变，插值处的内容都会更新。</li>
+      <li>
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">HelloWorld</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">props</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">msg</span><span class="p">:</span> <span class="nb">String</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+
+        <p>导出一个组件，这个组件有 name、props 属性。name - 组件名称，props - 组件属性。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">main.js</code>：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createApp</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App.vue</span><span class="dl">'</span>
+<span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">).</span><span class="nx">mount</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p>每个 Vue 应用都是通过用 <code class="language-plaintext highlighter-rouge">createApp</code> 函数创建一个新的<strong>应用实例</strong>开始的，传递给 <code class="language-plaintext highlighter-rouge">createApp</code> 的选项用于配置 <strong>根组件</strong> 。当我们<strong>挂载</strong>应用时，该组件被用作渲染的起点。title: Vue初始项目的理解
+subtitle: 当时的官方文档一坨s**t
+author: RuntimeEroor
+categories: 前端
+tags: Vue</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="1-appvue中的三个标签">1. <code class="language-plaintext highlighter-rouge">App.vue</code>中的三个标签：</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;template&gt;</code>包含了所有的标记结构和组件的展示逻辑。template 可以包含任何合法的 HTML，以及 Vue 特定的语法。来看一个初始项目的例子：<code class="language-plaintext highlighter-rouge">&lt;HelloWorld msg="Welcome to Yossur Vue.js App"/&gt;</code>，这个实际上是一个从 <code class="language-plaintext highlighter-rouge">HelloWorld.vue</code>传来的子级的组件。并且这样是向prop传入一个静态的值。</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;script&gt;</code>包含组件中所有的非显示逻辑，最重要的是， <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> 标签需要默认导出一个 JS 对象。该对象是您在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个对象会被处理和转换（包含 template 模板）成为一个有 <code class="language-plaintext highlighter-rouge">render()</code> 函数的 Vue 组件。接下来看一个初始项目的例子：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">HelloWorld</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./components/HelloWorld.vue</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app</span><span class="dl">'</span><span class="p">,</span> <span class="c1">//注册一个组件</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">HelloWorld</span><span class="c1">//注册一个子级别组件</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>    </div>
+
+    <p>其中值得注意的是ES6的新语法 <code class="language-plaintext highlighter-rouge">import/export</code>，<code class="language-plaintext highlighter-rouge">export default</code>默认只能导出一个，所以说名字是想导入的文件取的。</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>包括CSS代码，而且开始项目的 <code class="language-plaintext highlighter-rouge">&lt;style scoped&gt;</code>会使Vue 会把样式的范围限制到单文件组件的内容里。</li>
+</ul>
+
+<h2 id="2-components文件夹中的-helloworldvue">2. <code class="language-plaintext highlighter-rouge">components</code>文件夹中的 <code class="language-plaintext highlighter-rouge">HelloWorld.vue</code>：</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code>：使用“Mustache” (双大括号) 语法的文本插值，Mustache 标签将会被替代为对应组件实例中 <code class="language-plaintext highlighter-rouge">msg</code> property 的值。无论何时，绑定的组件实例上 <code class="language-plaintext highlighter-rouge">msg</code> property 发生了改变，插值处的内容都会更新。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">HelloWorld</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">props</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">msg</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<p>导出一个组件，这个组件有 name、props 属性。name - 组件名称，props - 组件属性。</p>
+
+<h2 id="3-mainjs">3. <code class="language-plaintext highlighter-rouge">main.js</code>：</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">import</span> <span class="p">{</span> <span class="nx">createApp</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
+   <span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App.vue</span><span class="dl">'</span>
+   <span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">).</span><span class="nx">mount</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>每个 Vue 应用都是通过用 <code class="language-plaintext highlighter-rouge">createApp</code> 函数创建一个新的<strong>应用实例</strong>开始的，传递给 <code class="language-plaintext highlighter-rouge">createApp</code> 的选项用于配置 <strong>根组件</strong> 。当我们<strong>挂载</strong>应用时，该组件被用作渲染的起点。</p>
+:ET

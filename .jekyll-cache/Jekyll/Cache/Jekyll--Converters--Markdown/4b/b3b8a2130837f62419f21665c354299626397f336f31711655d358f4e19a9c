@@ -1,0 +1,349 @@
+I"��<h2 id="1-html">1. HTML：</h2>
+
+<ul>
+  <li>
+    <p>表单：<code class="language-plaintext highlighter-rouge">&lt;form action="/my-handling-form-page" method="post"&gt;</code>，<code class="language-plaintext highlighter-rouge">action</code> 属性定义了在提交表单时,应该把所收集的数据送给谁(/那个模块)(URL)去处理。给出MDN的一个例子：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--</span> <span class="nx">这个for</span><span class="o">=</span> <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="nx">和下面的id绑定</span><span class="err">，</span><span class="nx">好处在下面的文章中会提到</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">form</span> <span class="nx">action</span><span class="o">=</span><span class="dl">"</span><span class="s2">/my-handling-form-page</span><span class="dl">"</span> <span class="nx">method</span><span class="o">=</span><span class="dl">"</span><span class="s2">post</span><span class="dl">"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">label</span> <span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Name</span><span class="p">:</span><span class="o">&lt;</span><span class="sr">/label&gt;</span><span class="err"> 
+</span>    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">user_name</span><span class="dl">"</span><span class="o">&gt;</span> 
+  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">label</span> <span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">mail</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">E</span><span class="o">-</span><span class="nx">mail</span><span class="p">:</span><span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">mail</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">user_email&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for=</span><span class="dl">"</span><span class="nx">msg</span><span class="dl">"</span><span class="s2">&gt;Message:&lt;/label&gt;
+    &lt;textarea id=</span><span class="dl">"</span><span class="nx">msg</span><span class="dl">"</span><span class="s2">&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;div class=</span><span class="dl">"</span><span class="nx">button</span><span class="dl">"</span><span class="s2">&gt;
+    &lt;button type=</span><span class="dl">"</span><span class="nx">submit</span><span class="dl">"</span><span class="s2">&gt;Send your message&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;!--要将数据命名为表单，您需要在每个表单小部件上使用 name 属性来收集特定的数据块。让我们再来看看我们的表单代码:在我们的例子中，表单会发送三个已命名的数据块 </span><span class="dl">"</span><span class="nx">user_name</span><span class="dl">"</span><span class="s2">, </span><span class="dl">"</span><span class="nx">user_email</span><span class="dl">"</span><span class="s2">, 和 </span><span class="dl">"</span><span class="nx">user_message</span><span class="dl">"</span><span class="s2">。这些数据将用使用HTTP POST 方法,把信息发送到URL为 </span><span class="dl">"</span><span class="o">/</span><span class="nx">my</span><span class="o">-</span><span class="nx">handling</span><span class="o">-</span><span class="nx">form</span><span class="o">-</span><span class="nx">page</span><span class="dl">"</span><span class="s2">目录下。--&gt;
+</span></code></pre></div>    </div>
+
+    <p>使用 <code class="language-plaintext highlighter-rouge">[div]</code>元素可以更加方便地构造代码，并且更容易样式化。</p>
+
+    <p>在 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>元素中，最重要的属性是 <code class="language-plaintext highlighter-rouge">type</code> 属性。</p>
+  </li>
+  <li>在我们的简单示例中，我们使用值 <code class="language-plaintext highlighter-rouge">text</code> 作为第一个输入——这个属性的默认值。它表示一个基本的单行文本字段，接受任何类型的文本输入。</li>
+  <li>对于第二个输入，我们使用值 <code class="language-plaintext highlighter-rouge">email</code>，它定义了一个只接受格式正确的电子邮件地址的单行文本字段。这会将一个基本的文本字段转换为一种“智能”字段，该字段将对用户输入的数据进行一些检查。</li>
+</ul>
+
+<h2 id="2-css">2. CSS：</h2>
+
+<p><code class="language-plaintext highlighter-rouge">ID's are unique. Each element can only have only one ID. Each page can have only one element with that ID. Classes are NOT unique, You can use the same class on multiple elements. You can use multiple classes on the same element. CSS doesn't care,But Javascript cares. document.getElementById()</code></p>
+
+<ul>
+  <li>就是一个很好的例子，而CSS尽量用class selector</li>
+  <li>选择器：；</li>
+  <li>CSS3:</li>
+</ul>
+
+<h2 id="3-es3">3. ES3：</h2>
+
+<ul>
+  <li>
+    <p>匿名函数：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">myGreeting</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">myGreeting</span><span class="p">();</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>闭包：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">outside</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">inside</span><span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">inside</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">fn_inside</span> <span class="o">=</span> <span class="nx">outside</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// 可以这样想：给一个函数，使它的值加3</span>
+<span class="nx">result</span> <span class="o">=</span> <span class="nx">fn_inside</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// returns 8</span>
+
+<span class="nx">result1</span> <span class="o">=</span> <span class="nx">outside</span><span class="p">(</span><span class="mi">3</span><span class="p">)(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// returns 8</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="4-es5">4. ES5：</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">getter</code>，<code class="language-plaintext highlighter-rouge">setter</code>：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">age</span> <span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+  <span class="kd">get</span> <span class="nx">getage</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="p">;</span>
+<span class="p">}</span>
+  <span class="kd">set</span> <span class="nx">setage</span> <span class="p">(</span><span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+<span class="p">}</span> 
+<span class="p">};</span>
+<span class="nx">person</span><span class="p">.</span><span class="nx">setage</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <p><code class="language-plaintext highlighter-rouge">Object.defineProperty()</code>：直接看代码就懂了</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">firstName</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bill</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">lastName</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">Gates</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">language</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">NO</span><span class="dl">"</span><span class="p">,</span> 
+<span class="p">};</span>
+
+<span class="c1">// 更改属性：</span>
+<span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="dl">"</span><span class="s2">language</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">value</span><span class="p">:</span> <span class="dl">"</span><span class="s2">EN</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">writable</span> <span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">enumerable</span> <span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">configurable</span> <span class="p">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+
+<span class="c1">// 枚举属性</span>
+<span class="kd">let</span> <span class="nx">txt</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="k">in</span> <span class="nx">person</span><span class="p">)</span>
+  <span class="nx">txt</span> <span class="o">+=</span> <span class="nx">person</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span> <span class="o">+</span> <span class="dl">"</span><span class="s2"> </span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">txt</span><span class="p">)</span> <span class="c1">// "Bill Gates EN"</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="5-es6">5. ES6：</h2>
+
+<ul>
+  <li>let（尽量多用，块级作用域，不存在变量提升），constant；</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">${}</code>字符串拼接：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span><span class="o">=</span><span class="dl">'</span><span class="s1">Karry Wang</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">str</span><span class="o">=</span><span class="s2">`I love </span><span class="p">${</span><span class="nx">a</span><span class="p">}</span><span class="s2">, because he is handsome.`</span><span class="p">;</span>
+<span class="c1">//注意：这行代码是用返单号引起来的</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>解构赋值：如果等号的右边不是可遍历的结构那么将会报错。</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">bar</span><span class="p">,</span> <span class="nx">foo</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="dl">'</span><span class="s1">aaa</span><span class="dl">'</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bbb</span><span class="dl">'</span> <span class="p">};</span>
+<span class="nx">foo</span> <span class="c1">// "aaa"</span>
+<span class="nx">bar</span> <span class="c1">// "bbb"</span>
+
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">baz</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="dl">'</span><span class="s1">aaa</span><span class="dl">'</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bbb</span><span class="dl">'</span> <span class="p">};</span>
+<span class="nx">baz</span> <span class="c1">// undefined</span>
+
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">bar</span><span class="p">,</span> <span class="nx">foo</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="dl">'</span><span class="s1">aaa</span><span class="dl">'</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bbb</span><span class="dl">'</span> <span class="p">};</span>
+<span class="nx">foo</span> <span class="c1">// "aaa"</span>
+<span class="nx">bar</span> <span class="c1">// "bbb"</span>
+
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">baz</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="dl">'</span><span class="s1">aaa</span><span class="dl">'</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bbb</span><span class="dl">'</span> <span class="p">};</span>
+<span class="nx">baz</span> <span class="c1">// undefined</span>
+
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">p</span><span class="p">:</span> <span class="p">[</span>
+    <span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">{</span> <span class="na">y</span><span class="p">:</span> <span class="dl">'</span><span class="s1">World</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">p</span><span class="p">,</span> <span class="na">p</span><span class="p">:</span> <span class="p">[</span><span class="nx">x</span><span class="p">,</span> <span class="p">{</span> <span class="nx">y</span> <span class="p">}]</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
+<span class="nx">x</span> <span class="c1">// "Hello"</span>
+<span class="nx">y</span> <span class="c1">// "World"</span>
+<span class="nx">p</span> <span class="c1">// ["Hello", {y: "World"}]</span>
+
+<span class="kd">const</span> <span class="nx">node</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">loc</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">start</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">line</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="na">column</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">loc</span><span class="p">,</span> <span class="na">loc</span><span class="p">:</span> <span class="p">{</span> <span class="nx">start</span> <span class="p">},</span> <span class="na">loc</span><span class="p">:</span> <span class="p">{</span> <span class="na">start</span><span class="p">:</span> <span class="p">{</span> <span class="nx">line</span> <span class="p">}}</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
+<span class="nx">line</span> <span class="c1">// 1</span>
+<span class="nx">loc</span>  <span class="c1">// Object {start: Object}</span>
+<span class="nx">start</span> <span class="c1">// Object {line: 1, column: 5}</span>
+</code></pre></div>    </div>
+    <p>用处：函数返回多值，提取JSON，遍历Map。</p>
+  </li>
+  <li>
+    <p>generator &amp; yield：yield是ES6的新关键字，使生成器函数执行暂停，yield关键字后面的表达式的值返回给生成器的调用者。它可以被认为是一个基于生成器的版本的return关键字，实际返回一个IteratorResult（迭代器）对象，它有两个属性，value和done，分别代表返回值和是否完成。yield无法单独工作，需要配合generator的其他函数，如 <code class="language-plaintext highlighter-rouge">next()</code>。</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span><span class="o">*</span> <span class="nx">gen1</span><span class="p">()</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen1</span><span class="p">());</span><span class="c1">//[object Generator]</span>
+
+<span class="kd">function</span><span class="o">*</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">yield</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">yield</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">gen2</span> <span class="o">=</span> <span class="nx">test</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen2</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span> <span class="c1">//{"done": false, "value": 1}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen2</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span> <span class="c1">//{"done": false, "value": 2}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen2</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span> <span class="c1">//{"done": yes, "value": 3}</span>
+</code></pre></div>    </div>
+    <p>实际上generator的强大之处还在下面几个例子中才能呈现出来：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span><span class="o">*</span> <span class="nx">withParam</span><span class="p">(){</span>
+  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">yield</span> <span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">a</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">gen3</span> <span class="o">=</span> <span class="nx">withParam</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen3</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span><span class="c1">//{ value: 'a', done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen3</span><span class="p">.</span><span class="nx">next</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">gen3</span><span class="p">.</span><span class="nx">value</span><span class="p">))</span><span class="c1">//{ value: undefined, done: true }</span>
+</code></pre></div>    </div>
+    <p>实际上generator和Thunk在状态机，异步调用中有着极大的作用：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">To</span> <span class="nx">be</span> <span class="nx">contin</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>箭头函数：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">v</span> <span class="o">=&gt;</span> <span class="nx">v</span><span class="p">;</span>
+
+<span class="c1">// 等同于</span>
+<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">v</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">;</span>
+<span class="c1">// 等同于</span>
+<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">5</span> <span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
+<span class="c1">// 等同于</span>
+<span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Object &amp; Class：</p>
+
+    <ul>
+      <li>
+        <p>属性的简洁写法：</p>
+
+        <p>ES6 允许在大括号里面，直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">bar</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">baz</span> <span class="o">=</span> <span class="p">{</span><span class="nx">foo</span><span class="p">};</span>
+<span class="nx">baz</span> <span class="c1">// {foo: "bar"}</span>
+
+<span class="c1">// 等同于</span>
+<span class="kd">const</span> <span class="nx">baz</span> <span class="o">=</span> <span class="p">{</span><span class="na">foo</span><span class="p">:</span> <span class="nx">foo</span><span class="p">};</span>
+</code></pre></div>        </div>
+        <p>上面代码中，变量 <code class="language-plaintext highlighter-rouge">foo</code>直接写在大括号里面。这时，属性名就是变量名, 属性值就是变量值。下面是另一个例子。</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// 等同于</span>
+
+<span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span><span class="na">x</span><span class="p">:</span> <span class="nx">x</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="nx">y</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="nx">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">// Object {x: 1, y: 2}</span>
+</code></pre></div>        </div>
+        <p>除了属性简写，方法也可以简写。</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">method</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="dl">"</span><span class="s2">Hello!</span><span class="dl">"</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// 等同于</span>
+
+<span class="kd">const</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="dl">"</span><span class="s2">Hello!</span><span class="dl">"</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>        </div>
+        <p>下面是一个实际的例子。</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">birth</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">2000/01/01</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Person</span> <span class="o">=</span> <span class="p">{</span>
+
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">张三</span><span class="dl">'</span><span class="p">,</span>
+
+  <span class="c1">//等同于birth: birth</span>
+  <span class="nx">birth</span><span class="p">,</span>
+
+  <span class="c1">// 等同于hello: function ()...</span>
+  <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">我的名字是</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
+
+<span class="p">};</span>
+</code></pre></div>        </div>
+        <p>这种写法用于函数的返回值，将会非常方便。</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getPoint</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">{</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="nx">getPoint</span><span class="p">()</span>
+<span class="c1">// {x:1, y:10}</span>
+</code></pre></div>        </div>
+        <p>属性的赋值器（setter）和取值器（getter），事实上也是采用这种写法。</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">cart</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">_wheels</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+
+  <span class="kd">get</span> <span class="nx">wheels</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_wheels</span><span class="p">;</span>
+  <span class="p">},</span>
+
+  <span class="kd">set</span> <span class="nx">wheels</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">_wheels</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="dl">'</span><span class="s1">数值太小了！</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_wheels</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+        <p>简洁写法在打印对象时也很有用。</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">bar</span><span class="p">:</span> <span class="dl">'</span><span class="s1">baz</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">foo</span><span class="p">)</span>
+<span class="c1">// {name: "test"} {bar: "baz"}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span><span class="nx">user</span><span class="p">,</span> <span class="nx">foo</span><span class="p">})</span>
+<span class="c1">// {user: {name: "test"}, foo: {bar: "baz"}}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+:ET

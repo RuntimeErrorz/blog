@@ -1,0 +1,1383 @@
+I"%�<h2 id="计算机网络和因特网">计算机网络和因特网</h2>
+
+<h3 id="计算机网络">计算机网络</h3>
+
+<ul>
+  <li>定义:两台以上具有独立操作系统的计算机通过某些介质连接成的相互共享软硬件资源的集合体。</li>
+  <li>功能</li>
+  <li>连通性</li>
+  <li>共享</li>
+</ul>
+
+<h3 id="internet">Internet</h3>
+
+<ul>
+  <li>具体构成</li>
+  <li>数以亿计的计算互连设备</li>
+  <li>通信链路</li>
+  <li>分组交换机</li>
+  <li>分组交换技术</li>
+  <li>因特网服务提供商</li>
+  <li>提供服务</li>
+  <li>提供网络应用基础架构</li>
+  <li>为分布式应用程序提供的通信服务接口</li>
+  <li>无连接服务</li>
+  <li>面向连接服务</li>
+  <li>协议</li>
+  <li>语法: 报文格式</li>
+  <li>语义: 每个字段的含义</li>
+  <li>同步: 报文传输的先后次序</li>
+  <li>标准</li>
+</ul>
+
+<p><img src="/blog/static/boxcnBst94zjaes0BvPos6GG9mh.png" alt="" /></p>
+
+<h3 id="网络边缘">网络边缘</h3>
+
+<ol>
+  <li><strong>网络结构</strong></li>
+</ol>
+
+<ul>
+  <li>网络边缘</li>
+  <li>主机</li>
+  <li>客户机和服务器（一般位于数据中心内）</li>
+  <li>接入网络，物理介质：</li>
+  <li>有线通信链路</li>
+  <li>无线通信链路</li>
+  <li>网络核心</li>
+  <li>互联的路由器</li>
+  <li>网络组成的网络</li>
+</ul>
+
+<ol>
+  <li><strong>端系统、客户和服务器</strong></li>
+</ol>
+
+<ul>
+  <li>端系统 (主机):</li>
+  <li>运行网络应用程序</li>
+  <li>处在网络的边缘</li>
+  <li>传统主机/网络计算机和瘦客户</li>
+  <li>客户/服务器 C/S 模型</li>
+  <li>客户请求，并接收服务器提供的服务</li>
+  <li>端对端模型 peer-peer model</li>
+  <li>极少或不采用专门服务器 • e.g. Gnutella, KaZaA</li>
+</ul>
+
+<ol>
+  <li><strong>接入网络</strong></li>
+</ol>
+
+<ul>
+  <li>接入网 (network access)</li>
+  <li>将端系统连接到其边缘路由器的物理链路。是用户连接到网络的基础设施。</li>
+  <li>边缘路由器(edge router)</li>
+  <li>端系统到任何其他远程端系统的路径上的第一台路由器。</li>
+</ul>
+
+<ol>
+  <li>家庭接入网络:</li>
+  <li>点对点接入</li>
+  <li>cable modems（线缆调制解调器）</li>
+  <li>FTTH（Fiber To The Home）-光纤到户</li>
+  <li>企业接入网络</li>
+  <li>local area networks (LAN)</li>
+  <li>WiFi 无线接入网络</li>
+  <li>广域无线接入网络（流量）</li>
+  <li><strong>物理媒体</strong></li>
+</ol>
+
+<ul>
+  <li>将网络中不同节点(主机和路由器)互相连接起来的物理线路。是进行数据传输的物理通路，通过传播电磁波或光脉冲来发送比特流。 也称为传输媒体、传输介质或传输媒介。</li>
+  <li>双绞线</li>
+  <li>同轴电缆</li>
+  <li>光纤</li>
+  <li>无线电</li>
+  <li>卫星无线电</li>
+  <li>面向连接的服务</li>
+  <li>可靠、顺序、字节流传输:</li>
+  <li>丢失: 确认和重传</li>
+  <li>流量控制：发送者不至于淹没接收者</li>
+  <li>拥塞控制：当网络拥塞时发送者降低发送速率</li>
+  <li>无连接服务</li>
+  <li>不可靠数据传输</li>
+  <li>无流量控制</li>
+  <li>无拥塞控制</li>
+</ul>
+
+<h3 id="网络核心部分"><strong>网络核心部分</strong></h3>
+
+<ul>
+  <li>电路交换</li>
+  <li>通信双方必须先建立一个专用的连接（电路），一直维持，直到通信结束。</li>
+  <li>频分多路复用 FDM(frequency-division multiplexing) 链路的频谱由跨越链路创建的连接所共享。</li>
+  <li>按频率划分若干频段，每个频段专用于一个连接。</li>
+  <li>带宽 bandwidth：频段的宽度，如 8kHz。</li>
+  <li>效率较低： 静默期（无数据传输）专用电路空闲，网络资源被浪费</li>
+  <li>创建端到端电路及预留端到端带宽的过程复杂</li>
+  <li>时分多路复用 TDM (time-division multiplexing) 时间划分为固定区间的帧，每帧再划分为固定数量的时隙，每一个时隙专用 于一个连接，用于传输数据。</li>
+  <li>分组交换</li>
+  <li>源主机将报文划分为一些列较小的数据块，封装成分组（packet）；并将每个分组通过若干链路和分组交换机，传送到目的主机；</li>
+  <li>目的主机拆分分组，提出数据快，并按顺序重新组装成报文。</li>
+  <li>传输过程中采用存储转发传输机制</li>
+  <li>转发分组前，要求收到完整分组</li>
+  <li>排队时延和分组丢失</li>
+  <li>输出缓存 （输出队列）：用于保存准备发往某个链路的分组。每条相连的链路都对应有一个。</li>
+  <li>排队时延：分组在输出缓存中等待转发的时间。某条链路上要转发的分组多，需在其输出缓存中等待。排队时延是变化的，与网络中的拥塞有关。</li>
+  <li>分组丢失： 当缓存空间已满时，有分组要被丢弃。</li>
+  <li>转发表和路由选择协议</li>
+  <li>资源竞争</li>
+  <li>资源需求总量可以大于可获得资源的总量</li>
+  <li>拥塞</li>
+  <li>采用分组队列, 等待使用链路</li>
+  <li>存储转发</li>
+  <li>在 1 个链路上传输</li>
+  <li>每经过 1 个节点转发一次</li>
+  <li>转发分组前，要求收到完整分组</li>
+  <li>优点：简单, 不需要建立连接</li>
+  <li>缺点：过渡竞争导致分组延迟与丢失 • 需要可靠数据传输、拥塞控制协议</li>
+  <li>问题: 如何提供电路级的性能? 对于音视频的网络应用需要带宽保障  仍然是 1 个没有解决的问题 (教材 chapter 9)</li>
+  <li>分类：</li>
+  <li>数据报网络</li>
+  <li>虚电路网络（一定是面向连接的）</li>
+</ul>
+
+<h3 id="internet-主干isp-的结构组成">Internet 主干/ISP 的结构组成</h3>
+
+<ol>
+  <li>一层” ISPs ＝National Backbone Provider (NBPs) 国家/国际级 ISP(e.g., 电信、联通、AT&amp;T， Verizon，MCI, NTT, Sprint)。</li>
+  <li>第二层 ISP(区域级 ISP) : 较小的(通常是区域级的) ISPs，连接到 1 个或多个 tier-1 ISPs，也可能连接其他 tier-2 ISPs</li>
+  <li>
+    <ol>
+      <li>Tier-3 ISP(本地 ISP 或接入 ISP)</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="分组交换网络中的延迟丢失和吞吐量">分组交换网络中的延迟、丢失和吞吐量</h3>
+
+<ol>
+  <li>分组延迟</li>
+  <li>处理时延</li>
+</ol>
+
+<ul>
+  <li>检查比特级的差错</li>
+  <li>检查分组头部，选择输出链路</li>
+  <li>高速路由器处理延迟－微妙级</li>
+</ul>
+
+<ol>
+  <li>排队时延</li>
+</ol>
+
+<ul>
+  <li>等待被发送到输出链路上的时间</li>
+  <li>取决于路由器的拥塞程度</li>
+  <li>排队时延可以是毫秒到微妙级</li>
+</ul>
+
+<p><img src="/blog/static/boxcngOsK6due2CGvjEuxsHJYMf.png" alt="" /></p>
+
+<ol>
+  <li>传输时延</li>
+</ol>
+
+<ul>
+  <li>R=链路带宽 (bps)</li>
+  <li>L=分组长度 (bits)</li>
+  <li>发送分组比特流的时间 = L/R</li>
+</ul>
+
+<ol>
+  <li>传播时延</li>
+</ol>
+
+<ul>
+  <li>d = 物理链路的长度</li>
+  <li>s = 介质的信号传播速度 (~2x108 m/sec)</li>
+  <li>传播延迟 = d/s</li>
+</ul>
+
+<ol>
+  <li>端到端时延</li>
+</ol>
+
+<ul>
+  <li>the time taken for a packet to be transmitted across a network from source to destination</li>
+</ul>
+
+<ol>
+  <li>吞吐量</li>
+</ol>
+
+<ul>
+  <li>接收端接收到数据的比特速率 (bps)</li>
+  <li>瞬时吞吐量: 某一瞬间的吞吐量</li>
+  <li>平均吞吐量: 一段时间内的吞吐量均值</li>
+</ul>
+
+<ol>
+  <li>例题</li>
+</ol>
+
+<p><img src="/blog/static/boxcnhAEZjeZHUBRYD3NWOI6cWd.png" alt="" /></p>
+
+<h3 id="协议层及其服务模型">协议层及其服务模型</h3>
+
+<ol>
+  <li>ISO/OSI 七层参考模型</li>
+</ol>
+
+<p><img src="/blog/static/boxcneIRdsTncwxl4w69vlDGDfM.png" alt="" /></p>
+
+<ul>
+  <li>开放系统互连 (OSI)参考模型是由国际标准化组织 (ISO) 于 1984 年提出的分层网络体系结构模型</li>
+  <li>目的是支持异构网络系统的互联互通</li>
+  <li>异构网络系统互连的国际标准</li>
+  <li>理解网络通信的最佳学习工具（理论模型）</li>
+  <li>理论成功，市场失败</li>
+</ul>
+
+<ol>
+  <li>TCP/IP 参考模型</li>
+</ol>
+
+<p><img src="/blog/static/boxcnYMim8gREbCahfJwO64UJ1c.png" alt="" /></p>
+
+<p>这里的应用层 = 应用层 + 表示层 + 会话层</p>
+
+<ol>
+  <li>网际协议栈</li>
+</ol>
+
+<ul>
+  <li>应用层 application: 支持网络应用，报文传送  FTP, SMTP, STTP</li>
+  <li>传输层 transport: 主机进程间数据段传送 TCP, UDP</li>
+  <li>网络层 network: 主机(源目标节点)间分组传送</li>
+  <li>链路层 link: 相邻网络节点间的数据帧传送  PPP, Ethernet …</li>
+  <li>物理层 physical: 物理介质上的比特传送</li>
+</ul>
+
+<p><img src="/blog/static/boxcnpOhg2PanVlOv2P9opnnaod.png" alt="" /></p>
+
+<h3 id="攻击威胁下的网络">攻击威胁下的网络</h3>
+
+<ul>
+  <li>分类被动攻击和主动攻击</li>
+  <li>攻击范式</li>
+  <li>植入恶意软件</li>
+  <li>病毒</li>
+  <li>蠕虫</li>
+  <li>僵尸网络：通过各种手段在大量计算机中植入特定的恶意程序，使控制者能够通过相对集中的若干计算机直接向大量计算机发送指令的攻击网络。攻击者通常利用这样大规模的僵尸网络实施各种其他攻击活动。</li>
+  <li>攻击服务器和网络基础设施</li>
+  <li>拒绝服务攻击（DoS）</li>
+  <li>三种类型</li>
+  <li>弱点攻击</li>
+  <li>带宽洪泛</li>
+  <li>连接洪泛</li>
+  <li>嗅探分组</li>
+  <li>记录每个流经的分组拷贝的被动接收机</li>
+  <li>伪装</li>
+  <li>生成具有任意源地址、分组内容和目的地址的分组，然后将这 个人工制作的分组传输到因特网中</li>
+  <li>将具有虚假源地址的分组注入因特网的能力称为 IP 哄骗</li>
+  <li>解决方法采用端点鉴别机制（第 8 章）</li>
+  <li>修改或删除报文</li>
+  <li>中间人攻击（man-in-middle attack）</li>
+</ul>
+
+<h2 id="应用层">应用层</h2>
+
+<h3 id="应用层协议原理">应用层协议原理</h3>
+
+<ol>
+  <li>网络应用</li>
+  <li>研发网络应用</li>
+  <li>网络应用程序体系结构</li>
+  <li>客户机/服务器体系结构</li>
+  <li>P2P 体系结构</li>
+  <li>客户机/服务器和 P2P 混合体系结构</li>
+  <li>进程通信</li>
+  <li>进程与计算机网络的接口-套接字</li>
+  <li>进程寻址</li>
+  <li>应用层协议</li>
+  <li>应用的要求</li>
+</ol>
+
+<h3 id="web-应用和-http-协议">Web 应用和 HTTP 协议</h3>
+
+<ol>
+  <li>Web</li>
+  <li>URL：协议 + 主机名 + 路径名</li>
+  <li>HTTP</li>
+  <li>无状态：服务器不维护客户先前的状态信息</li>
+  <li>非持久</li>
+</ol>
+
+<ul>
+  <li>每个 TCP 连接上只传送一个 对象，下载多个对象需要建立多个 TCP 连接</li>
+  <li>HTTP/1.0 使用非持久 HTTP 连接</li>
+</ul>
+
+<ol>
+  <li>持久</li>
+</ol>
+
+<ul>
+  <li>一个 TCP 连接上可以传送多个对象</li>
+  <li>HTTP/1.1 默认使用持久 HTTP 连接</li>
+</ul>
+
+<ol>
+  <li>相应时间模型</li>
+  <li>往返时间 RTT =  1 个小分组从客户主机到服务器再到客户主机所花费的时间.</li>
+  <li>响应时间:</li>
+  <li>1 个 RTT 用于建立 TCP 连接</li>
+  <li>1 个 RTT 用于 HTTP 请求/响应消息的交互</li>
+  <li>Html 文件传输时间</li>
+</ol>
+
+<ul>
+  <li>非持久</li>
+  <li>每个对象需要 2 个 RTT</li>
+  <li>OS 必须为每个 TCP 连接分配主机资源</li>
+  <li>大量客户的并发 TCP 连接形成服务器的严重负担</li>
+  <li>不带流水线的持久 HTTP 连接</li>
+  <li>客户先前响应消息收到,才发出新的请求消息 每个引用对象经历 1 个 RTT</li>
+  <li>带流水线的持久 HTTP 连接</li>
+  <li>客户遇到 1 个引用对象就发送请求消息</li>
+  <li>所有引用对象只经历 1 个 RTT</li>
+</ul>
+
+<ol>
+  <li>HTTP 报文格式</li>
+</ol>
+
+<ul>
+  <li>URI=Uniform Resource Identifiers</li>
+</ul>
+
+<ol>
+  <li>Cookie</li>
+  <li>Web 缓存</li>
+</ol>
+
+<h3 id="ftp">FTP</h3>
+
+<h3 id="smtppop3imap">SMTP、POP3、IMAP</h3>
+
+<ol>
+  <li>电子邮件</li>
+  <li>用户代理</li>
+</ol>
+
+<ul>
+  <li>允许用户阅读,回复,转发,保存,编辑邮件消息</li>
+  <li>发送, 接收邮件消息到/从服务器</li>
+  <li>例如：Outlook, foxmail，Web 客户端等</li>
+</ul>
+
+<ol>
+  <li>邮件服务器</li>
+</ol>
+
+<ul>
+  <li>邮箱 mailbox 存放用户接收的邮件消息</li>
+  <li>外出报文队列 outgoing message queue</li>
+</ul>
+
+<ol>
+  <li>简单邮件传送协议</li>
+  <li>Alice 使用用户代理编写邮件消息(给 bob@someschool.edu 的)</li>
+  <li>Alice 的用户代理发送邮件消息 到她的邮件服务器;邮件消息存放 在邮件消息队列</li>
+  <li>Alice 邮件服务器的 SMTP 客户端发起建立一个到 Bob 的邮件服务器的 SMTP 服务器端的 TCP 连接,经过应用层握手</li>
+  <li>SMTP 客户在这个 TCP 连接上发送 Alice 的邮件消息</li>
+  <li>Bob 服务器存放邮件消息存到 Bob 的邮箱</li>
+  <li>Bob 调用他的用户代理读邮件消息</li>
+  <li>邮件访问协议</li>
+  <li>POP3：Post Office Protocol 邮局协议 [RFC 1939] 110 端口号</li>
+</ol>
+
+<ul>
+  <li>无状态</li>
+  <li>POP 协议支持“离线”邮件处理。其具体过程是：邮件发送到服务器上，电子邮件客户端调用邮件客户机程序以连接服务器，并下载所有未阅读的电子邮件。这种离线访问模式是一种存储转发服务，将邮件从邮件服务器端送到个人终端机器上，一般是 PC 机或 MAC。一旦邮件发送到 PC 机或 MAC 上，邮件服务器上的邮件将会被删除。但 POP3 邮件服务器可以“只下载邮件，服务器端并不删除”，也就是改进的 POP3 协议。</li>
+</ul>
+
+<ol>
+  <li>IMAP：Internet Message Access Protocol [RFC 3501] 143 端口</li>
+</ol>
+
+<ul>
+  <li>所有邮件消息保存在一个位置: 服务器</li>
+  <li>允许用户利用文件夹组织管理邮件消息</li>
+  <li>IMAP 支持跨会话(Session)的用户状态</li>
+  <li>文件夹的名字</li>
+  <li>邮件消息 IDs 和文件夹的映射</li>
+  <li>可以本地和服务器同步</li>
+</ul>
+
+<h3 id="dns">DNS</h3>
+
+<ol>
+  <li>功能</li>
+</ol>
+
+<ul>
+  <li>主机名到 IP 地址的转换</li>
+  <li>主机别名</li>
+  <li>一个主机可以有一个规范主机名和多个主机别名</li>
+  <li>邮件服务器别名</li>
+  <li>负载分配</li>
+  <li>DNS 实现冗余服务器：一个 IP 地址集合可以对应于同一个规范主机名。</li>
+</ul>
+
+<ol>
+  <li>特点</li>
+</ol>
+
+<ul>
+  <li>分布式数据库：一个由分层 DNS 服务器实现的分布式数据库</li>
+  <li>应用层协议：DNS 服务器实现域名转换 (域名/地址转换)</li>
+</ul>
+
+<ol>
+  <li>查询</li>
+  <li>递归查询</li>
+</ol>
+
+<p><img src="/blog/static/boxcnxZSq6yw3VGEPHziUDAVM8b.png" alt="" /></p>
+
+<ol>
+  <li>迭代查询</li>
+</ol>
+
+<p><img src="/blog/static/boxcncMeuhs7Ekf10aD8eZDpmze.png" alt="" /></p>
+
+<ol>
+  <li>DNS 缓存和权威 DNS 记录更新</li>
+</ol>
+
+<ul>
+  <li>一旦名字服务器获得 DNS 映射, 它将缓存该映射到局部内存</li>
+  <li>服务器在一定时间后将丢弃缓存的信息</li>
+  <li>本地 DNS 服务器可以缓存 TLD 服务器的 IP 地址，因此根 DNS 服务器不会被经常访问</li>
+</ul>
+
+<ol>
+  <li>DNS 记录</li>
+</ol>
+
+<ul>
+  <li>存储资源记录(RR，Resource Records)：(name, value, type,ttl）</li>
+  <li>type=A（Address）</li>
+  <li>name = 主机名</li>
+  <li>value = IP 地址</li>
+  <li>type=CNAME（canonical）</li>
+  <li>name = 主机别名</li>
+  <li>value = 真实的规范主机名</li>
+  <li>type=NS （name server）</li>
+  <li>name = 域名（如 foo.com）</li>
+  <li>value = 该域权威名字服务器的主机名</li>
+  <li>Type=MX（mail exchange）</li>
+  <li>name =邮件服务器的主机别名</li>
+  <li>value =邮件服务器的真实规范主机名</li>
+</ul>
+
+<h3 id="p2p">P2P</h3>
+
+<h3 id="cdn">CDN</h3>
+
+<ol>
+  <li>将多份拷贝存储在地理上分散的不同站点来提供服务</li>
+  <li>深入 : 将 CDN 服务器部署在众多的接入网络中</li>
+  <li>邀请做客：在少量(例如 10 个)靠近接入网的关键位置(例如 IXP)，建造大集群，邀请到 ISP 做客</li>
+</ol>
+
+<h2 id="传输层">传输层</h2>
+
+<h3 id="传输层服务">传输层服务</h3>
+
+<ul>
+  <li>在两个不同的主机上运行的应用程序之间提供逻辑通信机制</li>
+  <li>传输层协议运行在端系统</li>
+  <li>发送方: 将应用程序报文分成报文段传递给网络层</li>
+  <li>接受方: 将报文段重新组装成报文传递到应用层</li>
+  <li>传输层可以为应用提供多种协议</li>
+  <li>因特网:</li>
+  <li>TCP</li>
+  <li>可靠按序递交 (TCP) 拥塞控制 流量控制 连接建立</li>
+  <li>UDP</li>
+  <li>不可靠的无序传递: UDP “尽力传递” IP 的直接扩展</li>
+  <li>两种服务均不保证: 延迟 带宽</li>
+</ul>
+
+<h3 id="多路复用和多路分解">多路复用和多路分解</h3>
+
+<ul>
+  <li>接收主机多路分解</li>
+  <li>发送主机多路复用</li>
+  <li>主机收到 IP 数据报 每个数据报有源 IP 地址，目的 IP 地址</li>
+  <li>每个数据报搬运一个报文段</li>
+  <li>每个报文段有源和目的端口号 （回忆: 对于特定应用程序具有周知端口号)</li>
+</ul>
+
+<ol>
+  <li>主机用 IP 地址和端口号指明报文段属于哪个合适的套接字</li>
+</ol>
+
+<ul>
+  <li>面向连接的多路分解</li>
+  <li>TCP 套接字由 4 部分指定:</li>
+  <li>源 IP 地址</li>
+  <li>源端口号</li>
+  <li>目的 IP 地址</li>
+  <li>目的端口号</li>
+  <li>接收主机使用所有四个值将报文定位到合适的套接字，服务器主机支持很多同时的 TCP 套接字 。三个被送至 IP address: B, dest port: 80 的报文，被多路分解到三个不同的套接字</li>
+</ul>
+
+<h3 id="无连接传输udp">无连接传输：UDP</h3>
+
+<ol>
+  <li>面向报文</li>
+  <li>特点</li>
+  <li>应用：</li>
+</ol>
+
+<ul>
+  <li>DNS</li>
+  <li>SNMP、RTP</li>
+</ul>
+
+<ol>
+  <li>UDP 报文段结构</li>
+</ol>
+
+<ul>
+  <li>2bytes 源端口、2bytes 目的端口、2bytes 长度（首部 + 数据字节数）、2bytes 校验和</li>
+  <li>伪首部：4bytes 源 IP，4bytes 目的 IP、1byte 全 0、1byte 17，2bytes 长度</li>
+</ul>
+
+<h3 id="rdt">RDT</h3>
+
+<ol>
+  <li>考虑几种特殊情况：Receiver 返回 ACK LOSS，Receiver 收到非正常序号 ACK</li>
+  <li>Premature ACK ：S 发的包的 ACK 回来晚了发新包，但是会收到重发的老包的 ACK。同样 R 也会收到 duplicate ACK</li>
+  <li></li>
+</ol>
+
+<h3 id="gbn">GBN</h3>
+
+<h3 id="sr">SR</h3>
+
+<ol>
+  <li>发送方</li>
+</ol>
+
+<ul>
+  <li>从上层收到数据 :</li>
+  <li>如果下一个可用的序号在发送方窗口内，则将数据打包并发送,启动定时器</li>
+  <li>超时(n):</li>
+  <li>重发分组 n, 重启定时器</li>
+  <li>收到 ACK(n)在[sendbase,sendbase+N-1]内:</li>
+  <li>标记分组 n 被接收</li>
+  <li>如果 n 是最小的未确认分组，则增加窗口基序号到下一个未被确认的序号</li>
+</ul>
+
+<ol>
+  <li>接收方</li>
+</ol>
+
+<ul>
+  <li>分组 n 的序号在[rcvbase, rcvbase+N-1]内</li>
+  <li>发送 ACK(n)</li>
+  <li>失序分组: 缓冲</li>
+  <li>有序分组: 交付上层 (包括已经缓冲的有序分组), 提高窗口到下一个没有接收的分组</li>
+  <li>分组 n 在[rcvbase-N,rcvbase-1]内</li>
+  <li>发送 ACK(n)</li>
+  <li>其他:</li>
+  <li>忽略</li>
+</ul>
+
+<h3 id="tcp">TCP</h3>
+
+<ol>
+  <li>TCP 报文段结构</li>
+</ol>
+
+<ul>
+  <li>2 bytes 源端口、2 bytes 目的端口</li>
+  <li>4 bytes 序号： 本报文段所发送的数据的第一个字节的序号</li>
+  <li>4 bytes 确认号：期望收到对方的下一个 报文段的数据的第一个字节的序号。</li>
+  <li>4 bits 数据偏移，即首部长度</li>
+  <li>6 bits 保留</li>
+  <li>CWE ECE URG ACK PSH RST SYN FIN</li>
+  <li>2 bytes checksum  伪首部：4bytes 源 IP，4bytes 目的 IP、1byte 全 0、1byte 6，2bytes 长度</li>
+  <li>16 bytes 紧急数据长度、</li>
+  <li>可变长度 选项</li>
+  <li>可变长度 填充字段 整个首部长度为 4 字节的倍数</li>
+</ul>
+
+<ol>
+  <li>时延</li>
+</ol>
+
+<ul>
+  <li>指数加权移动平均</li>
+  <li>EstimatedRTT = (1- 0.125)<em>EstimatedRTT + 0.125</em>SampleRTT</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>DevRTT = (1-0.25)<em>DevRTT +0.25</em></td>
+          <td>SampleRTT - EstimatedRTT</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>TimeoutInterval =   EstimatedRTT + 4*DevRTT</li>
+</ul>
+
+<ol>
+  <li>序号和确认</li>
+</ol>
+
+<ul>
+  <li>A：Seq=a+1 Ack=b+1 Len（有效数据）=12</li>
+  <li>B：Seq=b+1 Ack=a+1+12 Len=0</li>
+  <li>A：Seq=a+1+12 Ack=b+1 Len=24</li>
+  <li>B：Seq=b+1 Ack = a+1+12+24</li>
+</ul>
+
+<ol>
+  <li>握手挥手</li>
+  <li>握手</li>
+  <li>SYN = 1 Seq = X</li>
+  <li>SYN = 1 Seq = Y ACK = 1 ACK num = x + 1</li>
+  <li>Seq = X + 1 ACK = 1 ACK num = y + 1</li>
+</ol>
+
+<ul>
+  <li>客户发送 TCP SYN 报文段到服务器 -指定初始的序号 -没有数据</li>
+  <li>服务器接收 SYN, 回复 SYN/ACK 报文段 -服务器分配缓冲区 -指定服务器的初始序号</li>
+  <li>客户接收 SYN/ACK, 回复 ACK 报文段, 可能包含数据</li>
+</ul>
+
+<ol>
+  <li>挥手</li>
+  <li>客户发送 TCP FIN 控制报文段到服务器</li>
+  <li>服务器接收 FIN, 回复 ACK. 进入半关闭连接状态；（可能还有数据要发）</li>
+  <li>服务器发送 FIN 到客户，客户接收 FIN, 回复 ACK， 进入 “time wait”状态 等待结束时释放连接资源</li>
+  <li>服务器接收 ACK. 连接关闭.</li>
+  <li>拥塞控制</li>
+</ol>
+
+<ul>
+  <li>AIMD（增性加、乘性减）</li>
+  <li>慢启动</li>
+  <li>故以指数方式增加速率，直到产生丢失事件，或者 达到某个阈值 ssthresh</li>
+  <li>TCP Reno</li>
+  <li>当超时事件发生以后:</li>
+  <li>ssthresh= CongWin/2</li>
+  <li>CongWin 立即设置为 1 个 MSS；</li>
+  <li>窗口开始指数增长（进入慢启动）</li>
+  <li>收到三个重复的确认时：</li>
+  <li>ssthresh= CongWin/2</li>
+  <li>CongWin 减半 +3</li>
+  <li>进入线性增长（快速恢复）</li>
+  <li>TCP Tahoe</li>
+  <li>按照超时处理</li>
+</ul>
+
+<h2 id="网络层">网络层</h2>
+
+<h3 id="引言">引言</h3>
+
+<ol>
+  <li>功能</li>
+</ol>
+
+<ul>
+  <li>**转发(forwarding): 将分组从路由器的输入端口转移到正确的路由器输出端口 **</li>
+  <li>**路由(routing): 确定分组从发送方传输到接收方(目的主机)所经过的路径(或路由) **</li>
+  <li>从发送方主机传输报文段到接收方主机</li>
+  <li>发送方主机封装报文段(segments)为数 据报(datagrams)</li>
+  <li>接收方主机递交报文段给传输层</li>
+  <li>在每个主机、路由器上都需要运行网络层协议</li>
+  <li>路由器会检查通过它的所有 IP 数据报的头部字段，然后根据目的 IP 地址对数据报进行转发</li>
+</ul>
+
+<ol>
+  <li>平面</li>
+</ol>
+
+<ul>
+  <li>数据平面</li>
+  <li>本地的，每个路由器自身的功能</li>
+  <li>决定抵达路由器输入端口的数据包如何转发到输出端口</li>
+  <li>传统的路由算法: 在路由器内实现</li>
+  <li>软件定义网络（software-defined networking, SDN): 在远程服务器上实现</li>
+  <li>控制平面</li>
+  <li>整个网络范围</li>
+  <li>决定数据报在端到端路径上的路由器之间如何路由</li>
+</ul>
+
+<h3 id="虚电路和数据报网络">虚电路和数据报网络</h3>
+
+<ul>
+  <li>数据报 网络提供网络层的无连接服务</li>
+  <li>虚电路 网络提供网络层的连接服务</li>
+  <li>传输层：面向连接服务在网络边缘的端系统中实现。</li>
+  <li>网络层：面向连接服务在端系统及网络核心的路由器中实现。</li>
+  <li>最长前缀匹配</li>
+  <li>网络层服务模型简单。 端系统功能复杂：高层实现许多功能，如按序传送、可靠数据传输、拥塞 控制与 DNS 名字解析等； 带来的结果 • 因特网服务模型提供的服务保证最少（可能没有！），对网络层的需求 最小，使得互连使用各种不同链路层技术的网络变得更加容易。 许多应用都在位于网络边缘的主机（服务器）上实现。</li>
+</ul>
+
+<h3 id="路由器的结构">路由器的结构</h3>
+
+<ol>
+  <li>核心功能</li>
+</ol>
+
+<ul>
+  <li>运行路由算法/协议</li>
+  <li>将分组从路由器的输入链路传送到正确的输出链路</li>
+</ul>
+
+<ol>
+  <li>体系结构</li>
+  <li>输入端口</li>
+  <li>线路端接模块：将一条物理链路端接到路由器的物理层；</li>
+  <li>数据链路处理模块：实现路由器的数据链路层功能；</li>
+  <li>查找与转发模块：实现查找与转发功能，以便分组通过路由器交换结构 转发到适当的输出端口；</li>
+</ol>
+
+<ul>
+  <li>选路处理器计算转发表，给每个输入端口存放一份转发表拷贝。</li>
+  <li>在每个输入端口本地做出交换决策，无须激活中央选路处理器。</li>
+  <li>可避免在路由器中某个单点产生转发处理瓶颈。</li>
+  <li>目的：以线速完成输入端口的处理</li>
+  <li>排队：如果数据报到达输入端口的速度快于输入端口将数据报转发到交 换结构的速度，就会发生排队</li>
+</ul>
+
+<ol>
+  <li>交换结构</li>
+  <li>内存</li>
+  <li>总线</li>
+  <li>纵横式</li>
+  <li>选路处理器</li>
+  <li>输出端口 取出存放在输出端口内存中的分组，并将其传输到输出链路上</li>
+</ol>
+
+<h3 id="ip-协议">IP 协议</h3>
+
+<h4 id="ip-数据报格式ipv4">IP 数据报格式(IPV4)</h4>
+
+<ul>
+  <li>4 bits 版本号</li>
+  <li>4 bits 首部长度</li>
+  <li>8 bits 区分服务</li>
+  <li>2 bytes 数据报长度，首部 + 数据 最大 IP 分组的总长度：65535B</li>
+  <li>2 bytes 标识，新增加一</li>
+  <li>3 bits 标识 DF 位，1 表示不允许分片，0 表示运行分片；MF 位，1 表示后面有分片，0 表示这是最后一个分片；保留位，必须为 0</li>
+  <li>13 bits 偏移 指出分片数据报的数据载荷部分偏移其在原数据报的位置有多少个单位，片偏移以 8 个字节为单位</li>
+  <li>8 bits TTL，以跳数为单位</li>
+  <li>8 bits，上层协议</li>
+  <li>16 bits 首部校验和</li>
+  <li>32 bits 源 IP，目的 IP</li>
+</ul>
+
+<h4 id="ip-数据报分片和重组">IP 数据报分片和重组</h4>
+
+<ol>
+  <li>以太网 MTU1500B</li>
+</ol>
+
+<ul>
+  <li>4000B 分为 1500+1500+1040，OFFSET 为 0、185、370；fragflag 为 1、1、0</li>
+</ul>
+
+<h4 id="ip-分类主机号全-0-网络号全-1-广播地址">IP 分类（主机号全 0 网络号，全 1 广播地址）</h4>
+
+<ol>
+  <li>A 组</li>
+</ol>
+
+<ul>
+  <li>利用 IP 地址的第一个字节作为网络地址，最高位为 0，其余的三个字节作为主机地址。</li>
+  <li>1.0.0.1－127.255.255.254</li>
+</ul>
+
+<ol>
+  <li>B</li>
+</ol>
+
+<ul>
+  <li>利用 IP 地址的前两个字节作为网络地址，最高位为 10，其余的两个字节作为主机地址</li>
+  <li>128.0.0.1－191.255.255.254</li>
+</ul>
+
+<ol>
+  <li>C</li>
+</ol>
+
+<ul>
+  <li>利用 IP 地址的前三个字节作为网络地址，最高位为 110，最后一个字节作为主机地址</li>
+  <li>192.0.0.1－223.255.255.254</li>
+</ul>
+
+<ol>
+  <li>D</li>
+</ol>
+
+<ul>
+  <li>224.0.0.0～239.255.255.255</li>
+  <li>多播地址</li>
+</ul>
+
+<ol>
+  <li>E</li>
+</ol>
+
+<ul>
+  <li>240.0.0.0～255.255.255.255</li>
+  <li>用于某些实验和将来使用</li>
+</ul>
+
+<ol>
+  <li>特殊</li>
+</ol>
+
+<ul>
+  <li>本地回环 127.0.0.1-127.255.255.254</li>
+  <li>私有</li>
+</ul>
+
+<h4 id="传统分类">传统分类</h4>
+
+<h4 id="无分类编址-cidr-和地址聚合">无分类编址 CIDR 和地址聚合</h4>
+
+<ol>
+  <li>地址聚合找前缀：</li>
+</ol>
+
+<h4 id="dhcp">DHCP</h4>
+
+<ul>
+  <li>DHCP 服务器被动打开 UDP 端口 67， 等待客户端发来的报文。</li>
+  <li>DHCP 客户从 UDP 端口 68 发送 DHCP 发现报文（DHCPOFFER）。</li>
+  <li>凡收到 DHCP 发现报文的 DHCP 服务器 都发出 DHCP 提供报文，因此 DHCP 客户可能收到多个 DHCP 提供报文（DHCPOFFER）。</li>
+  <li>DHCP 客户从几个 DHCP 服务器中选择其中的一个，并向所选择的 DHCP 服务器发送 DHCP 请求报文（DHCPREQUEST）。</li>
+  <li>被选择的 DHCP 服务器发送确认报文 DHCPACK，客户进入已绑定状态，并可开始使用得到的临时 IP 地址了。</li>
+  <li>租用期过了一半（T1 时间到），DHCP 发送请求报文 DHCPREQUEST 要求更新租用期。</li>
+  <li>DHCP 服务器若不同意，则发回否认报文 DHCPNACK。这时 DHCP 客户必须立即停止使用原来的 IP 地址，而必须重新申请 IP 地址（回到步骤 2）</li>
+</ul>
+
+<h4 id="nat">NAT</h4>
+
+<ul>
+  <li>替换：利用(NAT IP 地址,新端口号)替换每个外出 IP 数据报的(源 IP 地址,源端口号)</li>
+  <li>记录 :将每对(NAT IP 地址, 新端口号) 与(源 IP 地址, 源端口号)的替换信息存储到 NAT 转换表</li>
+  <li>替换 :根据 NAT 转换表，利用(源 IP 地址, 源端口号)替换每个进入内网 IP 数据报的(目的 IP 地址,目的端口号)，即(NAT IP 地址, 新端口号)</li>
+</ul>
+
+<h4 id="icmp">ICMP</h4>
+
+<ol>
+  <li>Traceroute</li>
+</ol>
+
+<ul>
+  <li></li>
+  <li>源端发送一系列的 UDP 分组给目的端</li>
+  <li>第一个分组  TTL =1</li>
+  <li>第二个 TTL=2, 等等</li>
+  <li>当第 n 个分组到达第 n 个路由器时</li>
+  <li>路由器丢弃该分组</li>
+  <li>并给源端发送一个 ICMP 报文 (type 11, code 0)</li>
+  <li>这个报文包含了路由器的名称和 IP 地址</li>
+</ul>
+
+<h4 id="ipv6">IPV6</h4>
+
+<h3 id="路由和选路算法">路由和选路算法</h3>
+
+<ul>
+  <li>路由算法确定了通过网络的端到端路径</li>
+  <li>转发表确定了在路由器上的本地转发</li>
+  <li>根据给定的网络抽象图，找出从源节点到目的节点间的最低费用路径</li>
+  <li>分类</li>
+  <li>全局路由</li>
+  <li>链路状态路由算法 LS</li>
+</ul>
+
+<p><img src="/blog/static/boxcnZ2h0KlQAvkQCol5L8qkpPe.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcnYwa1unKTxzqx6f73Gftlnd.png" alt="" /></p>
+
+<ul>
+  <li>分布式路由算法</li>
+  <li>距离向量路由算法 DV</li>
+  <li>静态路由算法</li>
+  <li>最短路径路由选择     B.扩散法   D.基于流量的路由选择</li>
+  <li>动态路由算法</li>
+  <li></li>
+</ul>
+
+<h3 id="层次选路">层次选路</h3>
+
+<ol>
+  <li>层次选路概述</li>
+</ol>
+
+<ul>
+  <li>一个区域内的路由器组成集合 “自治系统” (AS，autonomous system )</li>
+  <li>同一个自治系统的路由器运行相同的 路由协议——区域内路由协议</li>
+  <li>不同自治系统内的路由器可以运行不同的区域内路由协议</li>
+  <li>和其他自治系统内的路由器直接相连的路由器</li>
+  <li>运行域间路由协议，与其他网关路由器交互</li>
+  <li>同自治系统内的所有其他路由器一样也运行域内路由协议</li>
+</ul>
+
+<ol>
+  <li>域内路由选择</li>
+</ol>
+
+<ul>
+  <li>RIP: 路由信息协议(Routing Information Protocol)</li>
+  <li>距离衡量: 跳数 (max = 15 hops，16 hops=∞)，每段链路 1 个跳步</li>
+  <li>每隔 30 秒, 邻居间交换一次距离向量 (也被称为 RIP 通告, advertisement)</li>
+  <li>每个通告：最多 25 个 AS 内的目的子网（IP 地址形式）</li>
+  <li>OSPF: 开放式最短路径优先 (Open Shortest Path First)</li>
+  <li>用链路状态算法</li>
+  <li>分发 LS 分组（通告）</li>
+  <li>每个路由器构造完整的网络（AS）拓扑图</li>
+  <li>路由器本地运行 Dijkstra 算法</li>
+  <li>每个 router 都广播 OSPF 通告，OSPF 通告里为每个邻居路由器设一个表项（记录每个邻居的链路特征和费用）。</li>
+  <li>通告会散布到整个自治系统 (通过洪泛法)</li>
+  <li>OSPF 报文直接封装到 IP 数据报中 (不是 TCP 或 UDP）</li>
+  <li>优点</li>
+  <li>安全: 所有 OSPF 消息需要认证 (防止恶意入侵)</li>
+  <li>允许多个相同开销的路径 (在 RIP 中只有一条路径)</li>
+  <li>对于每个链路, 有多个消费尺度用于不同的服务类型 TOS (例如在尽力转发时卫星链路代价设置为 “低” ，而对实时应用设置为高)</li>
+  <li>单播和多播综合支持:</li>
+  <li>多播 OSPF (MOSPF) 使用和 OSPF 同样的链路数据库</li>
+  <li>lOSPF 支持对大规模 AS 分层</li>
+  <li>IGRP: 内部网关路由协议 (Interior Gateway Routing Protocol,Cisco 私有)</li>
+</ul>
+
+<ol>
+  <li>域间选路</li>
+</ol>
+
+<ul>
+  <li>Internet 域间选路: BGP</li>
+  <li>eBGP：从相邻 AS 获取子网可达信息</li>
+  <li>iBGP：向该 AS 内部的所有路由器传播这些子网的可达信息</li>
+</ul>
+
+<h3 id="sdn">SDN</h3>
+
+<ul>
+  <li>基于流的转发：基于首部字段值进行转发</li>
+  <li>数据平面与控制平面分离：数据平面网络交换机组成，控制平面由服务器和管理流表软件构成。</li>
+  <li>网络控制功能：位于数据平面交换机外部，包括 SDN 控制器和若干网络控制程序。</li>
+  <li>可编程的网络：调用 API 定义和控制网络设备的数据平面。</li>
+</ul>
+
+<h2 id="链路层">链路层</h2>
+
+<h3 id="链路层概述">链路层概述</h3>
+
+<ol>
+  <li>术语</li>
+</ol>
+
+<ul>
+  <li>主机和路由器: 节点(nodes)</li>
+  <li>连接相邻节点的通信信道：链路(links)</li>
+  <li>有线链路(wired links)</li>
+  <li>无线链路(wireless links)</li>
+  <li>局域网(LANs)</li>
+  <li>第二层的分组: 数据帧(frame), 它是封装了的数据报</li>
+</ul>
+
+<ol>
+  <li>服务</li>
+</ol>
+
+<ul>
+  <li>组帧 (framing):</li>
+  <li>封装数据报为数据帧，增加头部(e.g.,地址信息)，尾部信息（e.g.,差错编码信息） •</li>
+  <li>帧同步(e.g.,帧定界符)</li>
+  <li>链路接入( link access)</li>
+  <li>如果是共享链路，需要解决信道接入(channel access)</li>
+  <li>在数据帧头部中，用 MAC 地址来标识源和目的</li>
+  <li>不同于 IP 地址</li>
+  <li>在相邻节点之间可靠传输数据帧（某些链路可能未实现）</li>
+  <li>在比特错误率很低的链路(光纤、双绞线)很少使用</li>
+  <li>无线链路：高比特错误率，需要可靠交付</li>
+  <li>流量控制(flow control): 用于控制发送节点向直接相连的接收节点发送数据帧的频率</li>
+  <li>差错检查(error detection)</li>
+  <li>差错可能由信号衰减、噪声引入</li>
+  <li>接收方检测是否出现错误</li>
+  <li>通知发送方重传或丢弃数据帧</li>
+  <li>错误纠正(error correction)</li>
+  <li>接收方直接纠正比特错误，而不需要请求重传</li>
+  <li>半双工和全双工(half-duplex and full-duplex)</li>
+  <li>在半双工：链路的两个节点交替双向传输，但是不能同时发送</li>
+  <li>全双工：链路两个节点同时双向传输</li>
+</ul>
+
+<ol>
+  <li>实现位置</li>
+</ol>
+
+<ul>
+  <li>在主机和网络设备(路由器)上实现</li>
+  <li>链路层的主体部分是在网络适配器 (称为网卡)或者一个芯片组上实现</li>
+  <li>以太网卡、802.11 卡、以太网 芯片组</li>
+  <li>实现链路层和物理层的功能</li>
+  <li>链路主机的系统总线</li>
+  <li>硬件、软件与固件的组成</li>
+</ul>
+
+<h3 id="差错检测和纠错">差错检测和纠错</h3>
+
+<ol>
+  <li>实现</li>
+</ol>
+
+<ul>
+  <li>发送节点</li>
+  <li>将数据 D 附加若干差错检测和纠错位 EDC， 一起发送到链路。</li>
+  <li>数据 D 包括网络层传来的数据报，以及链路级寻址信息、序列号和其他字段。</li>
+  <li>保护范围包括数据 D 的所有字段。</li>
+  <li>接收节点</li>
+  <li>接收比特序列 D’和 EDC’。</li>
+  <li>如果发生传输比特错误， D’和 EDC’可能与发送的 D 和 EDC 不同。</li>
+  <li>接收方根据 D’和 EDC’，判断 D’是否和初始 的 D 相同（D 的传输是否正确）。</li>
+</ul>
+
+<ol>
+  <li>技术</li>
+</ol>
+
+<ul>
+  <li>奇偶校验：最基本的方法。</li>
+  <li>发送方： 在要发送的信息 D（d 位）后面附加一个奇偶校验位</li>
+  <li>使“1”的个数是奇数（奇校验）或偶数（偶校验） 一起传输发送（d+1 位）。</li>
+  <li>接收方： • 检测收到的信息（d+1 位）中“1”的个数。</li>
+  <li>偶校验：发现奇数个“1”，至少有一个比特发生差错（奇数个比特差错）。 •</li>
+  <li>奇校验：发现偶数个“1”，至少有一个比特发生差错。</li>
+  <li>可以查出任意奇数个错误，但不能发现偶数个错误。</li>
+  <li>若比特差错概率很小，差错独立发生，一比特奇偶校验可满足要求。</li>
+  <li>若差错集中一起“突发”（突发差错），一帧中未检测到的差错的概率达到 50%。</li>
+  <li>二维就校验</li>
+  <li>可以检测并纠正单个比特差错（数据或校验位中）。</li>
+  <li>能够检测(但不能纠正)分组中任意两个比特的差错。</li>
+  <li>Internet 校验和：常用于运输层。</li>
+  <li>循环冗余检测：常用于链路层</li>
+  <li></li>
+  <li>可检测出所有奇数位错；</li>
+  <li>可检测出所有双比特的错；</li>
+  <li>可检测出所有小于、等于校验位长度的突发错</li>
+</ul>
+
+<h3 id="多路访问链路和协议">多路访问链路和协议</h3>
+
+<ol>
+  <li>点对点链路：链路两端各一个节点。一个发送和一个接收。</li>
+</ol>
+
+<ul>
+  <li>拨号接入 PPP。</li>
+  <li>以太网交换机与主机间的点对点链路</li>
+</ul>
+
+<ol>
+  <li>广播链路（共享介质）： 多个节点连接到一个共享的广播信道。</li>
+</ol>
+
+<ul>
+  <li>广播<strong>：</strong>任何一个节点传输一帧时，信号在信道上广播，其他节点都可以收到一个拷贝。常用于局域网 LAN 中，如早期的以太网和无线局域网。</li>
+</ul>
+
+<ol>
+  <li>多路访问问题： 如何协调多个发送和接收节点对共享广播信道的访问</li>
+  <li>多路访问协议</li>
+</ol>
+
+<ul>
+  <li>目的：协调多个节点在共享广播信道上的传输， 避免多个节点同时使用信道，发生冲突（碰撞），产生互相干扰。 冲突是指两个以上的节点同时传输帧，使接收方收不到正确的帧</li>
+  <li>分类</li>
+  <li>信道划分协议</li>
+  <li>TDMA 时分多路访问</li>
+  <li>FDMA 频分多路访问</li>
+  <li>CDMA 码分多路访问</li>
+  <li>随机访问协议</li>
+  <li>ALOHA 协议(纯 ALOHA，时隙 ALOHA)</li>
+  <li>载波监听多路访问 CSMA 协议</li>
+  <li>某个节点在发送之前，先监听信道。</li>
+  <li>信道忙：有其他节点正往信道发送帧，该节点随机等待（回退）一段时间， 然后再侦听信道</li>
+  <li>带冲突检测的载波监听多路访问 CSMA/CD</li>
+  <li>基本原理：传送前侦听 • 信道忙：延迟传送 • 信道闲：传送整个帧 •</li>
+  <li>发送同时进行冲突检测：一旦检测到冲突就立即停止传输， 尽快重发。</li>
+  <li>目的：缩短无效传送时间，提高信道的利用率。</li>
+  <li>冲突检测: • 有线局域网易于实现：测量信号强度，比较发射信号与接收信号 • 无线局域网很难实现：接收信号强度淹没在本地发射信号强度下</li>
+  <li>公式</li>
+  <li></li>
+</ul>
+
+<div style="text-align: center">$$数据帧最小长度为L_{min} \space bits，带宽为R \space bps，传播速度为Vm/s。\frac{L_{min}}{R} = \frac{2d_{max}}{V}$$</div>
+
+<ul>
+  <li>带冲突避免的载波监听多路访问 CSMA/CA</li>
+  <li>轮流协议</li>
+</ul>
+
+<h3 id="交换局域网">交换局域网</h3>
+
+<ol>
+  <li>数据链路层分为</li>
+</ol>
+
+<ul>
+  <li>逻辑链路控制子层 LLC</li>
+  <li>链路层寻址</li>
+  <li>每个接口有网络层地址和链路层地址。</li>
+  <li>网络层地址： 节点在互连网络中分配的一个唯一地址（IP 地址）。</li>
+  <li>链路层地址：MAC 地址（ 6 字节 ）。 用于把数据帧从一个节点传送到另一个节点(同一网络中)。</li>
+  <li>ARP</li>
+  <li>介质访问控制子层 MAC</li>
+</ul>
+
+<h3 id="以太网技术">以太网技术</h3>
+
+<ol>
+  <li>媒体访问控制（MAC）子层</li>
+</ol>
+
+<p><img src="/blog/static/boxcnsg9LS4eonYYBGooNjLo8we.png" alt="" /></p>
+
+<ol>
+  <li>帧结构</li>
+</ol>
+
+<p><img src="/blog/static/boxcnErlX1FXIYuOFxt5Xjwhn2g.png" alt="" /></p>
+
+<ol>
+  <li>链路层交换机</li>
+  <li>自学习</li>
+  <li>交换方式</li>
+  <li>三层交换机</li>
+</ol>
+
+<ul>
+  <li>发送站点 A 在开始发送时，把自己的 IP 地址与 B 站的 IP 地址比较，判断 B 站是否与 自己在同一子网内。</li>
+  <li>若目的站 B 与发送站 A 在同一子网内，则进行二层的转发。</li>
+  <li>若两个站点不在同一子网内，则发送站 A 要向“缺省网关”发出 ARP 请求，请求获得 B 的 MAC 地址。</li>
+  <li>如果三层交换机知道 B 的 MAC 地址，则向 A 回复 B 的 MAC 地址。否则三层交换机根 据路由信息向 B 站广播一个 ARP 请求，B 站得到此 ARP 请求后向三层交换机回复其 MAC 地址，三层交换机将 B 站的 MAC 地址保存到二层交换引擎的 MAC 地址表中， 并回复给发送站 A。</li>
+  <li>A 直接用 B 的 MAC 地址封装数据帧，三层交换机接收到数据后直接进行二层交换。</li>
+</ul>
+
+<ol>
+  <li>VLAN</li>
+  <li>利用支持 VLAN 的交换机，可以在一个实际的物理局域网内，定义多个虚拟的局域网</li>
+  <li>基于端口的 VLAN</li>
+</ol>
+
+<ul>
+  <li>利用交换机内置 的管理软件，将端口分组，使得 一个单独的交换机</li>
+  <li>流量隔离：从 1-8 号端口进/出的帧，只能访 问 1-8 号端口</li>
+  <li>动态成员：端口可以在 VLAN 之间动态调整</li>
+  <li>VLAN 间转发：通过路由完成（就像独立的交换机之间）</li>
+  <li>在实际中，厂商会将路由功能和交换功能都整合在一台设备</li>
+  <li>干线端口（ trunk port ）承载定义在多个物理交换机之上的 VLAN 间的流量</li>
+</ul>
+
+<h2 id="大题">大题</h2>
+
+<h3 id="应用层-1">应用层</h3>
+
+<h4 id="求时间">求时间</h4>
+
+<p><img src="/blog/static/boxcnc5xu0enDUH8Ky0oBGlst2f.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcnp3kpKpgwQOBDLr80DsYVmg.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcnmWtWwvKTwTrOK0RL7iloqc.png" alt="" /></p>
+
+<p>The time to transmit an object of size L over a link or rate R is L/R. The average time is the average size of the object divided by R:</p>
+
+<p> = (850,000 bits)/(15,000,000 bits/sec) = .0567 sec</p>
+
+<p>The traffic intensity on the link is given by =(16 requests/sec)(.0567 sec/request) = 0.907. Thus, the average access delay is (.0567 sec)/(1 - .907) = .6 seconds. The total average response time is therefore .6 sec + 3 sec = 3.6 sec.</p>
+
+<p>b)        The traffic intensity on the access link is reduced by 60% since the 60% of the requests are satisfied within the institutional network. Thus the average access delay is (.0567 sec)/[1 – (.4)(.907)] = .089 seconds. The response time is approximately zero if the request is satisfied by the cache (which happens with probability .6); the average response time is .089 sec + 3 sec = 3.089 sec for cache misses (which happens 40% of the time). So the average response time is (.6)(0 sec) + (.4)(3.089 sec) = 1.24 seconds. Thus the average response time is reduced from 3.6 sec to 1.24 sec.</p>
+
+<h4 id="dns-1">DNS</h4>
+
+<p>思考：网站主机名是 <a href="http://www.foo.com">www.foo.com</a>， 真实的规范主机名是 servereast.backup1.foo.com，IP 地址：112.147.11.30。邮件主机名 mail.foo.com,真实的规范主机名 servereast.backup2.foo.com，IP 地址：112.147.11.40。在权威服务器中需要的 RR？</p>
+
+<p>(www.network.com, servereast.backup1.foo.com, CNAME）</p>
+
+<p>(servereast.backup1.foo.com ,12.147.11.30, A ）</p>
+
+<p>(mail.network.com, servereast.backup2.foo.com, MX ）</p>
+
+<p>(servereast.backup2.foo.com, 112.147.11.40, A)</p>
+
+<p>例子：刚刚创建一个“网络乌托邦”公司</p>
+
+<p>在域名管理机构(如 Network Solutions)注册域名 networkutopia.com</p>
+
+<p>需要提供你自己的基本权威 DNS 服务器的名字和 IP 地址</p>
+
+<p>该注册登记机构将下列两条资源记录插入注册机构的 DNS 系统中：</p>
+
+<p>(network.com, dns1.network.com, NS)</p>
+
+<p>(dns1.network.com, 212.212.212.1, A)</p>
+
+<p>在<strong>权威域名解析服务器</strong>中为 <a href="http://www.networkuptopia.com">www.networkuptopia.com</a>（真实机器名 web1. networkuptopia.com, IP 地址 212.212.212.2）加入 Type A 记录，为 mail.networkutopia.com(真实机器名 mx1.mxmail. networkuptopia.com,IP 地址 212.212.212.3)加入 Type MX 记录</p>
+
+<p>（ www.network.com, web1.netword.com,CNAME）</p>
+
+<p>(web1.netword.com,212.212.212.2, A)</p>
+
+<p>（ mail.network.com, mx1.mxmail. network.com, MX）</p>
+
+<p>（mx1.mxmail. network.com,212.212.212.3,A）</p>
+
+<h3 id="传输层-1">传输层</h3>
+
+<p>1.滑动窗口解决的是发送方和接收方接收数据速率不一致的问题,通过设置滑动窗口(可以通俗的理解为接收方的缓存)可以缓解这一个问题。具体的操作是接收方会向发送方通知自己可以接受数据的大小，而发送方会根据这个数值，发送数据。</p>
+
+<p>2.拥塞窗口用控制全局网络的拥塞情况。通过控制发送方每次发送的流量的多少，用来逐渐试探整体网络的拥塞程度。如果没有拥塞控制，发送方每次发送的数据大小为滑动窗口，在只有 2 台主机的时候确实是没有问题的，但是如果放到现实的网络大环境中来说是行不通的。因为如果每台主机都发送的窗口大小的数据，那么整个网络系统必然会瘫痪。所以通过在发送方设置拥塞窗口，可以有效缓解网络压力。</p>
+
+<p>swnd = min(cwnd, rwnd)</p>
+
+<p>192.0.0.0 到 223.255.255.255</p>
+
+<p>172.16.0.0 到 172.31.255.255</p>
+
+<p>10.0.0.0 到 10.255.255.255</p>
+
+<p>每一域名服务器都至少知道根服务器的 IP 地址及其它结点服务器的 IP 地址</p>
+
+<p>Socket</p>
+
+<p>bind</p>
+
+<p>listen</p>
+
+<p>accept</p>
+
+<p>read</p>
+
+<p>write</p>
+
+<p>close</p>
+
+<p>Socket connect write read close</p>
+
+<p>OSPF IP</p>
+
+<p>RIP UDP</p>
+
+<h2 id="记忆">记忆</h2>
+
+<p>计算机网络两大功能：连通性，共享</p>
+
+<p>计算机网络组成部分：计算互连设备、通信链路、分组交换设备</p>
+
+<p>提供服务：网络应用基础架构、无连接服务和面向连接服务(套接字)</p>
+
+<p>Internet 标准的几个阶段：因特网草案、建议标准、草案标准、因特网标准</p>
+
+<p>因特网组成部分（网络边缘、接入网、网络核心）</p>
+
+<p>边缘部分：由各主机构成，用户直接进行信息处理和信息共享;低速连入核心网。核心部分：由 各路由器连网，负责为边缘部分提供高速远程分组交换。</p>
+
+<ul>
+  <li>语法:  报文格式</li>
+  <li>语义:  每个字段的含义</li>
+  <li>同步:  报文传输的先后次序</li>
+</ul>
+
+<p>分层的好处</p>
+
+<ul>
+  <li>结构清晰，有利于识别复杂系统的部件及其关系</li>
+  <li>模块化使得系统的升级、维护</li>
+  <li>有利于标准化</li>
+</ul>
+
+<p>开放网络体系结构的系统设计原则:</p>
+
+<ul>
+  <li>最简单化,自治原则 – 网络独立运作，与其他网络互连时无须进行内部改动</li>
+  <li>尽力服务原则– 提供尽最大努力的端到端服务</li>
+  <li>无状态路由器 – 路由器无须维护连接状态信息</li>
+  <li>分散式控制</li>
+</ul>
+
+<p>TCP UDP 服务</p>
+
+<ul>
+  <li>TCP 服务：面向连接、可靠数据传输、流量控制、拥塞控制；无时延和带宽保证</li>
+  <li>UDP 服务：不提供建立连接，可靠性，流量控制，拥塞控制，时延和带宽保证</li>
+</ul>
+
+<p>HTTP 请求报文：</p>
+
+<pre><code class="language-HTTP">GET /somedir/page.html HTTP/1.1
+
+Host: www.someschool.edu 
+
+User-agent: Mozilla/4.0 //该代理类型的对象版本
+
+Connection: Close  //不使用持久连接
+
+Accept-language:zh-cn //中文版本
+
+</code></pre>
+
+<p>HTTP 相应消息</p>
+
+<pre><code class="language-HTTP">HTTP/1.1 200 OK 
+
+Connection：close
+
+Date: Sat, 06 Aug 2011 12:00:15 GMT 
+
+Server: Apache/1.3.0 (Unix) 
+
+Last-Modified: Thu, 22 Jun 2011 …... 
+
+Content-Length: 6821 
+
+Content-Type: text/html
+
+ 
+
+data data data data data ... 
+
+</code></pre>
+
+<p>链路层：封装成帧、透明传输、差错检测</p>
+
+<p>需要注意的是，以长帧长度限制是 1518 字节。减去 18 字节的以太网帧长度，所以 ip 层的报文长度限制为 1500。</p>
+
+<ul>
+  <li>二维就校验</li>
+  <li>可以检测并纠正单个比特差错（数据或校验位中）。</li>
+  <li>能够检测(但不能纠正)分组中任意两个比特的差错。</li>
+  <li>Internet 校验和：常用于运输层。</li>
+  <li>循环冗余检测：常用于链路层</li>
+  <li>可检测出所有奇数位错；</li>
+  <li>可检测出所有双比特的错；</li>
+  <li>可检测出所有小于、等于校验位长度的突发错</li>
+</ul>
+:ET

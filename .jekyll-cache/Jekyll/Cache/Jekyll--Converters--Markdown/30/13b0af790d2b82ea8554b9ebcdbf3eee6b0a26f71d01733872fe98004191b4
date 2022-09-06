@@ -1,0 +1,555 @@
+I"G<h1 id="软件测试">软件测试</h1>
+
+<h2 id="引论">引论</h2>
+
+<p>软件测试是一种检测软件的正确性、完整性、安全性和评估其质量的活动过程。是一种以发现程序错误、衡量软件质量为目的，并对其是否满足用户需求进行评估的活动过程。</p>
+
+<h3 id="法则">法则</h3>
+
+<ol>
+  <li>对于任何系统，穷尽测试不可能；</li>
+  <li>测试工作可以具有创造性，但较困难；</li>
+  <li>测试旨在减少系统中缺陷数目，不太可能完全消除系统所有缺陷；</li>
+  <li>测试是有风险的、成本高昂的；</li>
+  <li>测试需要有计划性，否则无法确保测试项目顺利完成；</li>
+  <li>测试需要有独立性，否则难以让人信服。</li>
+</ol>
+
+<h3 id="瀑布模型">瀑布模型</h3>
+
+<ol>
+  <li>需求分析</li>
+  <li>设计</li>
+  <li>编程</li>
+  <li>测试</li>
+  <li>维护</li>
+</ol>
+
+<h3 id="v-模型">V 模型</h3>
+
+<ol>
+  <li>需求分析 &lt;—-&gt;  验收测试</li>
+  <li>系统设计 &lt;—-&gt; 系统测试</li>
+  <li>详细功能设计 &lt;—-&gt; 功能测试</li>
+  <li>编码 &lt;—-&gt; 单元测试</li>
+</ol>
+
+<h3 id="软件质量保证">软件质量保证</h3>
+
+<p>是指通过对软件产品进行有计划的评审和审计，来确保软件开发按照产品质量过程标准实施项目的管理活动。</p>
+
+<ul>
+  <li>对软件过程各个阶段任务的完成质量及出现问题进行评审、跟踪。</li>
+  <li>审查和验证软件产品开发过程是否遵守适用的标准、规程和要求，并最终确保产品满足用户需求；</li>
+  <li>建立软件质量要素的度量机制，对软件开发的各种质量指标进行量化，为管理者提供软件开发的质量分析数据。</li>
+</ul>
+
+<p>SQA 指导软件测试的计划与执行，监督测试工作结果的客观性、准确性与有效性，并协助软件测试的工作流程改进；</p>
+
+<p>软件测试是 SQA 工作落实的重要手段，它为 SQA 提供所需的质量数据，作为软件质量评价的客观依据。</p>
+
+<p>SQA 是一项软件质量管理性工作，侧重于对软件开发流程进行评审和监控。</p>
+
+<p>软件测试是一项技术性工作，侧重于对软件质量特性进行检测与验证。</p>
+
+<h3 id="测试驱动开发">测试驱动开发</h3>
+
+<p>要求在编写某个功能的代码之前先编写测试代码，然后编写功能代码，通过测试来推动整个软件开发的进行。</p>
+
+<h3 id="习题">习题</h3>
+
+<p>成功的软件测试是发现软件中的缺陷； 过程评审不是软件测试的范畴。</p>
+
+<h2 id="软件测试基本概念">软件测试基本概念</h2>
+
+<h3 id="缺陷">缺陷</h3>
+
+<p>欠缺或不够完备的地方。因为缺陷是相对质量要求而存在的，任何违背了质量要求、违背了客户的志愿、不能满足用户的要求，都可以认为是缺陷。</p>
+
+<p>软件缺陷指软件中存在的任何一种破坏正常运行能力的问题、错误、异常、失败等，导致软件产品在一定程度上不能满足用户的需要。</p>
+
+<h3 id="软件质量">软件质量</h3>
+
+<p>质量是产品或服务满足所明示或隐含需求能力的固有特性集合；软件产品或服务满足用户需求的程度。具体地说，软件符合明确叙述的功能和性能需求、符合开发标准，具有专业软件都应满足的隐含特征和特性。</p>
+
+<h3 id="软件产品质量属性">软件产品质量属性：</h3>
+
+<ul>
+  <li>功能性</li>
+  <li>可靠性</li>
+  <li>可用性</li>
+  <li>效率</li>
+  <li>可移植性</li>
+  <li>可维护性</li>
+  <li>兼容性</li>
+  <li>可扩展性</li>
+</ul>
+
+<p>使用质量</p>
+
+<ul>
+  <li>有效性</li>
+  <li>生产率</li>
+  <li>安全性</li>
+  <li>满意度</li>
+  <li>外部质量属性</li>
+  <li>功能性</li>
+  <li>可靠性</li>
+  <li>易用性</li>
+  <li>效率</li>
+  <li>维护性</li>
+  <li>可移植性</li>
+</ul>
+
+<p>内部质量</p>
+
+<ul>
+  <li>代码耦合性</li>
+  <li>数据耦合性</li>
+  <li>程序规范性</li>
+  <li>需求可溯性</li>
+  <li>代码复杂度</li>
+</ul>
+
+<p><img src="/blog/static/boxcnjPqoLXj1eUnmMRW6LW5IAe.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcnMR4cokJPBIe6vye6I16fHe.png" alt="" /></p>
+
+<p>静态测试:指对系统需求规格说明书、系统设计规格说明书进行评审，对程序代码进行审查及静态分析等测试活动;</p>
+
+<p>动态测试:指将被测软件程序进行运行，观察该程序运行过程中的系统行为、变量结果、内存、堆栈等运行数据，来判断软件系统是否存在缺陷的测试活动;</p>
+
+<p>产品评审:可以及早发现需求分析、软件设计阶段等阶段的缺陷问题，是对软件开发文档或代码进行评估的一种手段，以判断是否与预期结果一致。</p>
+
+<ul>
+  <li>需求评审</li>
+  <li>设计评审</li>
+  <li>代码评审</li>
+  <li>文档评审</li>
+  <li>管理评审</li>
+  <li>流程评审</li>
+</ul>
+
+<p>前四个软件测试，后两个软件质量保证</p>
+
+<p>静态分析是对软件的源代码进行研读，查找错误或收集一些度量数据，并不需要对代码进行编译和仿真运行</p>
+
+<p><img src="/blog/static/boxcnXqgdXg132aP4dphi9R7Pre.png" alt="" /></p>
+
+<p>黑盒测试：不考虑内部结构和特性进行功能测试，是从用户观点出发开展的测试，目的是尽可能发现软件的外部行为错误</p>
+
+<p>特点：与软件具体实现无关，用例设计可以和软件实现同时进行</p>
+
+<p>白盒测试 了解被测程序内部逻辑结构对该程序的内部变量、逻辑结构、运行路径进行测试，检验被测程序的内部动或运行功能，是否符合设计规格要求。</p>
+
+<p>原则：执行测试时先考虑各个分支被覆盖，考虑完成所有逻辑条件分别为真值和假值的测试 测试程序流程图中的独立路径。</p>
+
+<p>局限：穷举路径测试不太可能 不能检测出程序违反设计规范，不能检测出编程遗漏路径，可能发现不了一些与数据相关的异常错误。</p>
+
+<p>单元测试：单元测试针对软件测试中的最小功能单元代码进行测试（主要白盒），需要编写驱动模块和桩模块</p>
+
+<h3 id="系统测试">系统测试</h3>
+
+<ul>
+  <li>系统功能性测试：</li>
+  <li>系统非功能性测试：</li>
+  <li>性能测试（负载测试、压力测试）</li>
+  <li>等等</li>
+</ul>
+
+<h3 id="验收测试">验收测试</h3>
+
+<ul>
+  <li>α 测试</li>
+  <li>β 测试</li>
+</ul>
+
+<h3 id="测试用例">测试用例</h3>
+
+<p>是指为特定测试目的送设计的测试条件测试数据以及测试规程的使用场景</p>
+
+<h3 id="课堂习题">课堂习题</h3>
+
+<p><img src="/blog/static/boxcnNwdc4ym2faIGx0gL4N5Qzb.png" alt="" /></p>
+
+<p>DDB</p>
+
+<p><img src="/blog/static/boxcnfIvLNoFAwtUs6TulW3mkU4.png" alt="" /></p>
+
+<p>CBD</p>
+
+<h2 id="软件测试方法">软件测试方法</h2>
+
+<ol>
+  <li>Ad-hoc 测试方法：根据测试人员的应用知识和测试人员随机测试进行的，而不遵循规范/要求。因此，Adhoc 测试的成功取决于测试者进行测试的能力。测试人员必须找到缺陷，无需任何适当的规划和文档，仅基于测试人员的直觉。</li>
+  <li>ALAC，基于客户使用产品的经验知识所进行的测试方法</li>
+  <li>错误推测法</li>
+  <li>等价类</li>
+  <li>边界值就是大于小于没有等于</li>
+  <li>因果图（<strong>使用形式化规格描述输入组合</strong>）</li>
+</ol>
+
+<p><img src="/blog/static/boxcnsgTXv35vC0Qot4ZYwGXxXf.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcnGOlUdYVNdPNrp6GXjrMSNb.png" alt="" /></p>
+
+<ol>
+  <li>判定表</li>
+</ol>
+
+<p><img src="/blog/static/boxcnzgWiu43Rq9FRHVVnbPL0Og.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcnwOU5wlaLUAKqecc5cqEN3e.png" alt="" /></p>
+
+<ol>
+  <li>成对组合测试：每一列从上往下看排列</li>
+  <li>正交实验法（<strong>多因素多值域</strong>） ：</li>
+</ol>
+
+<p><img src="/blog/static/boxcn1BYyIZRUjs8AvZERU5awOg.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 水平数等于输入取值数（有、无），因子数等于有多少种不同的输入（员工号，学号，邮箱），行数等于因字数*(水平数-1)+1
+</code></pre></div></div>
+
+<ol>
+  <li>语句覆盖：</li>
+  <li>判定覆盖：大条件取值全</li>
+  <li>条件覆盖：小条件取值全，（T1 F2 T3 F4；F1 T2  F3 T4）满足条件覆盖不一定满足判定覆盖</li>
+  <li>判定-条件覆盖： 判定中每个条件子句的所有可能至少出现一次；同时每个判定分支也至少出现一次， 未考虑条件子句的组合情况。</li>
+</ol>
+
+<p>例如 y&gt;1 z=0</p>
+
+<p>一组符合判定/条件覆盖的用例需要满足下面</p>
+
+<ul>
+  <li>使得判定为真、假</li>
+  <li>使得 y&gt;1、y&lt;=1</li>
+  <li>使得 z=0 &amp;&amp; z!=0</li>
+</ul>
+
+<ol>
+  <li>条件组合覆盖：满足“条件组合覆盖”的测试用例是一定满足 “判定覆盖”、“条件覆盖”和“判定-条件覆盖” 。所有子条件的组合情况</li>
+</ol>
+
+<p><img src="/blog/static/boxcnttKdhVgajqYESPtb96phDe.png" alt="" /></p>
+
+<ol>
+  <li>基本路径覆盖（数量等于基本路径数 +1），每个判定标准反转</li>
+  <li>课后题目：</li>
+</ol>
+
+<p><img src="/blog/static/boxcn9xJXwP1YkfmEyqmPcFHlHB.png" alt="" /></p>
+
+<p>XDC</p>
+
+<p><img src="/blog/static/boxcnEKBtJn8xtK3MfMdVmIFdRe.png" alt="" /></p>
+
+<p>BBBA</p>
+
+<p><img src="/blog/static/boxcnhAbeFHCoWDHeTL1mcQsBlh.png" alt="" /></p>
+
+<p>BA</p>
+
+<p><img src="/blog/static/boxcnpa02W0SLBEAfzPiEvYiJNd.png" alt="" /></p>
+
+<p>BB</p>
+
+<h2 id="测试流程和规范">测试流程和规范</h2>
+
+<h3 id="软件测试过程的活动">软件测试过程的活动</h3>
+
+<p><img src="/blog/static/boxcnNaPcNfRLGlLEWgOV4dGPjb.png" alt="" /></p>
+
+<h3 id="软件测试过程的活动-1">软件测试过程的活动</h3>
+
+<p><img src="/blog/static/boxcnv4qPTI3trf5QIbrjkk5I5f.png" alt="" /></p>
+
+<h3 id="测试阶段输入输出">测试阶段输入输出</h3>
+
+<p><img src="/blog/static/boxcnr1M1tnLkKnMUXbEslcYPHg.png" alt="" /></p>
+
+<h3 id="软件开发与软件测试的-w-模型关系">软件开发与软件测试的 W 模型关系</h3>
+
+<p><img src="/blog/static/boxcnYqjJ6cuoSNHA17Ag24mygf.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcnk0XWM7kXxmvFjlwD0OM6Ke.png" alt="" /></p>
+
+<h3 id="tmap-测试模型">TMAP 测试模型</h3>
+
+<p>业务驱动的、基于风险策略的、结构化的测试管理方法，其目标是尽早地发现缺陷，以最小的成本、有效地、彻底地完成测试任务。</p>
+
+<p><img src="/blog/static/boxcn0tPZRZSK01Z1FFKFlLaWwe.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcn5AJtxBeWMs3YB1W829qiCg.png" alt="" /></p>
+
+<p>三个基石 坚实的组织融合（O） 正确的基础设施和工具（I） 可用的技术（T）</p>
+
+<h3 id="敏捷测试">敏捷测试</h3>
+
+<p>是一种遵从敏捷开发原则能够很好地版主敏捷软件开发实现对质量控制的测试实践。敏捷测试=持续的质量反馈</p>
+
+<ul>
+  <li>敏捷测试测试方法：</li>
+  <li>基于脚本测试：无论手工测试、自动化测试都需要先设计用例生成测试脚本然后执行脚本实施测试。</li>
+  <li>探索式测试：不需要设计测试用例，一边思考，一边测试。</li>
+  <li>在敏捷测试中主要采用探索式测试，基于脚本测试作补充。在传统测试中主要采用基于脚本测试，探索式测试作补充。</li>
+</ul>
+
+<h3 id="基于风险的测试策略">基于风险的测试策略</h3>
+
+<p>基于分概念的测试策略是指评估测试的优先级。先做高的。</p>
+
+<h3 id="测试过程改进">测试过程改进</h3>
+
+<p>测试能力成熟度模型 TMM/TMMi</p>
+
+<h3 id="软件测试规范">软件测试规范</h3>
+
+<p>是对软件测试每个流程元素进行明确的界定，形成一个系统的完整测试体系。</p>
+
+<h3 id="课堂练习">课堂练习</h3>
+
+<p><img src="/blog/static/boxcnKoU9slqMGCPwqgozulzO0b.png" alt="" /></p>
+
+<p>C</p>
+
+<ol>
+  <li>需求评审</li>
+  <li>设计评审</li>
+  <li>单元测试</li>
+  <li>集成测试</li>
+  <li>系统测试</li>
+  <li>验收测试</li>
+  <li>测试计划</li>
+  <li>测试设计</li>
+  <li>执行与监控</li>
+  <li>结果分析与评估</li>
+  <li>项目总结</li>
+</ol>
+
+<p>ACBA</p>
+
+<h2 id="单元测试与集成测试">单元测试与集成测试</h2>
+
+<h3 id="单元测试">单元测试</h3>
+
+<ul>
+  <li>路径测试</li>
+  <li>局部数据结构测试</li>
+  <li>单元接口测试</li>
+  <li>单元边界条件的测试</li>
+  <li>单元容错性测试</li>
+  <li>内存分析</li>
+</ul>
+
+<h3 id="集成测试">集成测试</h3>
+
+<p>桩程序为模拟下层 的模块，驱动程序则为模拟上层模块，</p>
+
+<ul>
+  <li>非渐增式集成测试</li>
+  <li>渐增式集成测试</li>
+  <li>自顶向下增量集成测试</li>
+</ul>
+
+<p><img src="/blog/static/boxcn06dBU7f2MtGENm5lDLsvpq.png" alt="" /></p>
+
+<ul>
+  <li>自底向上增量集成测试</li>
+</ul>
+
+<p><img src="/blog/static/boxcnwA2sAnT6dED1aG3gEQ0d3c.png" alt="" /></p>
+
+<ul>
+  <li>三明治增量集成测试</li>
+</ul>
+
+<p><img src="/blog/static/boxcnpVG2olfsQe7t6BcXvqSMCf.png" alt="" /></p>
+
+<ul>
+  <li>改进的三明治集成测试</li>
+</ul>
+
+<p><img src="/blog/static/boxcn70uK1vc2WPsOMuJChmDhge.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcn9av5sYQlyYf5VqPgecXNpg.png" alt="" /></p>
+
+<h3 id="课堂练习-1">课堂练习</h3>
+
+<p><img src="/blog/static/boxcnhI3SdJyFYvN8NdaeNfMgzb.png" alt="" /></p>
+
+<p>CADCD</p>
+
+<p><img src="/blog/static/boxcnyIm8I3l5Wkfn3gy5RPL1rd.png" alt="" /></p>
+
+<p>DDCDD</p>
+
+<h2 id="系统测试-1">系统测试</h2>
+
+<p><img src="/blog/static/boxcnlp1qF2dL9NKXXOCz49Tyle.png" alt="" /></p>
+
+<h3 id="系统级功能测试">系统级功能测试</h3>
+
+<h3 id="回归测试修改代码后再次测试">回归测试：修改代码后再次测试</h3>
+
+<h3 id="性能测试">性能测试</h3>
+
+<h4 id="目的">目的</h4>
+
+<ul>
+  <li>评估当前系统性能</li>
+  <li>寻找系统性能瓶颈</li>
+  <li>规划系统配置</li>
+</ul>
+
+<h4 id="分类">分类</h4>
+
+<ul>
+  <li>性能验证测试</li>
+  <li>性能基准测试</li>
+  <li>性能规划测试</li>
+  <li>系统容量测试（确定最大容量）</li>
+  <li>系统压力测试（稳定性、压力性、更快发现内存泄漏、线程锁定）</li>
+  <li>系统负载测试（用于发现性能瓶颈、内存泄漏，施加不同负载）</li>
+</ul>
+
+<h3 id="系统安全测试">系统安全测试</h3>
+
+<p><img src="/blog/static/boxcngZr5jwz5mcnkSGRTV97eJe.png" alt="" /></p>
+
+<h3 id="容错性测试">容错性测试</h3>
+
+<h3 id="兼容性测试">兼容性测试</h3>
+
+<h3 id="可靠性测试">可靠性测试</h3>
+
+<h3 id="课堂练习-2">课堂练习</h3>
+
+<p><img src="/blog/static/boxcnS4KimZht5fnMQ71bIhPQ4g.png" alt="" /></p>
+
+<p>CCCBB</p>
+
+<p><img src="/blog/static/boxcnc38gYye4magiH056bmvhkh.png" alt="" /></p>
+
+<p>D D D A C</p>
+
+<h2 id="验收测试-1">验收测试</h2>
+
+<h3 id="验收测试内容">验收测试内容</h3>
+
+<p><img src="/blog/static/boxcnum5q9VuZhAefElfl4UiVjh.png" alt="" /></p>
+
+<h3 id="产品规格说明书验证">产品规格说明书验证</h3>
+
+<p><img src="/blog/static/boxcnnTRinOIkB39x0xAZVeJiJf.png" alt="" /></p>
+
+<h3 id="用户界面测试与可用性测试">用户界面测试与可用性测试</h3>
+
+<ul>
+  <li>好的用户界面：</li>
+  <li>规范性</li>
+  <li>直观性</li>
+  <li>一致性</li>
+  <li>灵活性</li>
+  <li>舒适性</li>
+  <li>正确性</li>
+  <li>实用性</li>
+</ul>
+
+<h3 id="安装测试和可恢复性测试">安装测试和可恢复性测试</h3>
+
+<h3 id="课堂练习-3">课堂练习</h3>
+
+<p><img src="/blog/static/boxcnyjEWc5fz8PImCAzQpnveic.png" alt="" /></p>
+
+<p>ABDCD</p>
+
+<p><img src="/blog/static/boxcnN0lxZY07sJNLFWVCqMcVFh.png" alt="" /></p>
+
+<p>CBBDA</p>
+
+<h2 id="本地化测试">本地化测试</h2>
+
+<h3 id="软件本地化">软件本地化</h3>
+
+<h3 id="软件国际化">软件国际化</h3>
+
+<h3 id="课堂练习-4">课堂练习</h3>
+
+<p><img src="/blog/static/boxcnGJ0Ahzk5iWzf1dQoT3HJvb.png" alt="" /></p>
+
+<p>ADA</p>
+
+<h2 id="测试自动化及其框架">测试自动化及其框架</h2>
+
+<h3 id="内涵">内涵</h3>
+
+<h3 id="原理">原理</h3>
+
+<p><img src="/blog/static/boxcnGvdCLHAk5SSkEKNrjtlDCe.png" alt="" /></p>
+
+<h3 id="功能测试工具特性要求">功能测试工具特性要求</h3>
+
+<p><img src="/blog/static/boxcnGu9lvvHLfwqM7rn6dtLZDb.png" alt="" /></p>
+
+<h3 id="性能测试工具特性要求">性能测试工具特性要求</h3>
+
+<p><img src="/blog/static/boxcnk5nY5vgEVYRLjqXqel7lZc.png" alt="" /></p>
+
+<h3 id="课堂练习-5">课堂练习</h3>
+
+<p><img src="/blog/static/boxcn4Q08CHsDktwl1zOg4DBOCc.png" alt="" /></p>
+
+<p>DC<strong>D</strong>CB</p>
+
+<p><img src="/blog/static/boxcnnuPtnlmp4hxHAQVF8IusMg.png" alt="" /></p>
+
+<h2 id="测试需求分析与测试计划">测试需求分析与测试计划</h2>
+
+<h3 id="测试目标与准则">测试目标与准则</h3>
+
+<p><img src="/blog/static/boxcnkV5SXbgnbUljjOUmUzr2Sc.png" alt="" /></p>
+
+<h3 id="测试需求分析">测试需求分析</h3>
+
+<p><img src="/blog/static/boxcngEIEKRgIMdV2YSEAPnFyse.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcndKa2zuSmhptvR3IYdUYttf.png" alt="" /></p>
+
+<p><img src="/blog/static/boxcnXTLscCvViYUKyegtPyQ9uc.png" alt="" /></p>
+
+<h3 id="测试项目估算与进度安排">测试项目估算与进度安排</h3>
+
+<ul>
+  <li>依据</li>
+</ul>
+
+<p><img src="/blog/static/boxcn1FWIoA2wI0PBoWeMqPCYQh.png" alt="" /></p>
+
+<ul>
+  <li>甘特图（进度安排）</li>
+</ul>
+
+<h3 id="测试风险管理与策略">测试风险管理与策略</h3>
+
+<h3 id="测试计划内容与编制">测试计划内容与编制</h3>
+
+<h3 id="课堂练习-6">课堂练习</h3>
+
+<p><img src="/blog/static/boxcnPVjqY1nI3N3hPKNG6pd4Fk.png" alt="" /></p>
+
+<p>DBDAC</p>
+
+<h2 id="软件质量保证-1">软件质量保证</h2>
+
+<h3 id="软件质量度量">软件质量度量</h3>
+
+<h3 id="软件质量保证-2">软件质量保证</h3>
+
+<h3 id="课堂练习-7">课堂练习</h3>
+
+<p><img src="/blog/static/boxcn3R5Umqdau2SLEwdSjzEYQe.png" alt="" /></p>
+
+<p>DDDDC</p>
+:ET

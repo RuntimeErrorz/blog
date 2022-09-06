@@ -1,0 +1,159 @@
+I"�U<h2 id="安装tsc和ts-node">安装tsc和ts-node</h2>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cnpm</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">typescript</span><span class="w"> </span><span class="nt">--g</span><span class="w">
+</span><span class="n">cnpm</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">ts-node</span><span class="w"> </span><span class="nt">--g</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="看代码就够了">看代码就够了</h2>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//******基本类型******//</span>
+<span class="kd">let</span> <span class="nx">str</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">123</span><span class="dl">"</span>
+
+<span class="kd">let</span> <span class="nx">nan</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="kc">NaN</span>
+<span class="kd">let</span> <span class="nx">hex</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mh">0xf00d</span>
+<span class="kd">let</span> <span class="nx">bin</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mb">0b100</span>
+<span class="kd">let</span> <span class="nx">oct</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mo">0o744</span>
+
+<span class="kd">let</span> <span class="nx">bool</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="kd">let</span> <span class="nx">bool2</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="nb">Boolean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="kd">let</span> <span class="nx">undef</span><span class="p">:</span> <span class="k">void</span> <span class="o">=</span> <span class="kc">undefined</span>
+
+<span class="kd">let</span> <span class="nx">an</span><span class="p">:</span> <span class="kr">any</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="nx">an</span> <span class="o">=</span> <span class="kc">true</span>
+
+<span class="kd">let</span> <span class="nx">bbb</span><span class="p">:</span> <span class="nx">unknown</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">123</span><span class="dl">'</span>
+<span class="kd">let</span> <span class="nx">aaa</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">456</span><span class="dl">'</span>
+<span class="c1">//aaa = bbb  不能将类型“unknown”分配给类型“string”</span>
+
+<span class="c1">//******接口的使用******//</span>
+<span class="kr">interface</span> <span class="nx">A</span> <span class="p">{</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="nb">String</span>
+<span class="p">}</span>
+<span class="kr">interface</span> <span class="nx">A</span> <span class="p">{</span>
+    <span class="nl">age</span><span class="p">:</span> <span class="nb">Number</span>
+<span class="p">}</span>
+
+<span class="kr">interface</span> <span class="nx">A</span> <span class="p">{</span> <span class="c1">//相同名称的接口会合并</span>
+    <span class="k">readonly</span> <span class="nx">a</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">b</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="p">[</span><span class="nx">propName</span><span class="p">:</span> <span class="kr">string</span><span class="p">]:</span> <span class="kr">any</span><span class="p">,</span> <span class="c1">//允许添加新的任意属性</span>
+    <span class="nx">func</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="kr">string</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">obj</span><span class="p">:</span> <span class="nx">A</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RuntimeError</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="na">a</span><span class="p">:</span> <span class="dl">"</span><span class="s2">I am readonly</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">func</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="dl">"</span><span class="s2">Hello</span><span class="dl">"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//******数组类型******//</span>
+<span class="kd">let</span> <span class="nx">arr_number</span><span class="p">:</span> <span class="kr">number</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="kd">let</span> <span class="nx">list</span><span class="p">:</span> <span class="kr">any</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">test</span><span class="dl">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[],</span> <span class="p">{</span> <span class="na">a</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}]</span>
+
+<span class="kd">let</span> <span class="nx">arr_number_2</span><span class="p">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="kd">let</span> <span class="nx">arr_in_arr</span><span class="p">:</span> <span class="kr">number</span><span class="p">[][]</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]];</span>
+
+<span class="kd">let</span> <span class="nx">list_any</span><span class="p">:</span> <span class="kr">any</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">test</span><span class="dl">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[],</span> <span class="p">{</span> <span class="na">a</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}]</span>
+
+<span class="kr">interface</span> <span class="nx">NumberArray</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nx">index</span><span class="p">:</span> <span class="kr">number</span><span class="p">]:</span> <span class="kr">number</span><span class="p">;</span>
+<span class="p">}</span> <span class="c1">//表示：只要索引的类型是数字时，那么值的类型必须是数字。</span>
+<span class="kd">let</span> <span class="nx">fibonacci</span><span class="p">:</span> <span class="nx">NumberArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">Arr</span><span class="p">(...</span><span class="nx">args</span><span class="p">:</span> <span class="kr">any</span><span class="p">):</span> <span class="nx">IArguments</span> <span class="p">{</span>
+    <span class="c1">// console.log(arguments)</span>
+    <span class="c1">//ts内置对象IArguments 定义</span>
+    <span class="kd">let</span> <span class="nx">arr</span><span class="p">:</span> <span class="nx">IArguments</span> <span class="o">=</span> <span class="nx">arguments</span>
+    <span class="k">return</span> <span class="nx">arr</span>
+<span class="p">}</span>
+<span class="nx">Arr</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">333</span><span class="p">)</span>
+
+<span class="c1">//******函数类型******// </span>
+<span class="kd">function</span> <span class="nx">reverse</span><span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="kr">number</span><span class="p">):</span> <span class="kr">number</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">reverse</span><span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="kr">string</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">reverse</span><span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="kr">number</span> <span class="o">|</span> <span class="kr">string</span><span class="p">):</span> <span class="kr">number</span> <span class="o">|</span> <span class="kr">string</span> <span class="o">|</span> <span class="k">void</span> <span class="p">{</span> <span class="c1">//联合类型</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">number</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="dl">''</span><span class="p">).</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="dl">''</span><span class="p">));</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">string</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">x</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">''</span><span class="p">).</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">interface</span> <span class="nx">People</span> <span class="p">{</span>
+    <span class="nl">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span>
+    <span class="nx">height</span><span class="p">:</span> <span class="kr">number</span>
+<span class="p">}</span>
+<span class="kr">interface</span> <span class="nx">Man</span> <span class="p">{</span>
+    <span class="nl">sex</span><span class="p">:</span> <span class="kr">string</span>
+<span class="p">}</span>
+<span class="kd">const</span> <span class="nx">xiaoman</span> <span class="o">=</span> <span class="p">(</span><span class="nx">man</span><span class="p">:</span> <span class="nx">People</span> <span class="o">&amp;</span> <span class="nx">Man</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">//交叉类型</span>
+    <span class="c1">// console.log(man.age)</span>
+    <span class="c1">// console.log(man.height)</span>
+    <span class="c1">// console.log(man.sex)</span>
+<span class="p">}</span>
+<span class="nx">xiaoman</span><span class="p">({</span> <span class="na">age</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="na">height</span><span class="p">:</span> <span class="mi">180</span><span class="p">,</span> <span class="na">sex</span><span class="p">:</span> <span class="dl">'</span><span class="s1">male</span><span class="dl">'</span> <span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">promise</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">resolve</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="nx">promise</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// console.log(res)</span>
+<span class="p">})</span>
+
+<span class="c1">//******元组类型******// </span>
+<span class="kd">let</span> <span class="nx">excel</span><span class="p">:</span> <span class="p">[</span><span class="kr">string</span><span class="p">,</span> <span class="kr">string</span><span class="p">,</span> <span class="kr">number</span><span class="p">,</span> <span class="kr">string</span><span class="p">][]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">123</span><span class="dl">'</span><span class="p">],</span>
+    <span class="p">[</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">123</span><span class="dl">'</span><span class="p">],</span>
+    <span class="p">[</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">123</span><span class="dl">'</span><span class="p">],</span>
+    <span class="p">[</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">123</span><span class="dl">'</span><span class="p">],</span>
+    <span class="p">[</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">123</span><span class="dl">'</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="c1">//******枚举类型******//</span>
+<span class="kr">enum</span> <span class="nx">Types</span> <span class="p">{</span>
+    <span class="nx">Red</span><span class="p">,</span>
+    <span class="nx">Green</span><span class="p">,</span>
+    <span class="nx">BLue</span>
+<span class="p">}</span>
+
+<span class="c1">//******类型别名******//</span>
+<span class="kd">type</span> <span class="nx">str</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="kr">string</span>
+<span class="kd">let</span> <span class="nx">s</span><span class="p">:</span> <span class="nx">str</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="dl">"</span><span class="s2">RuntimeError</span><span class="dl">"</span>
+
+<span class="kd">type</span> <span class="nx">str2</span> <span class="o">=</span> <span class="kr">string</span> <span class="o">|</span> <span class="kr">number</span>
+<span class="kd">let</span> <span class="nx">s2</span><span class="p">:</span> <span class="nx">str2</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="kd">let</span> <span class="nx">s3</span><span class="p">:</span> <span class="nx">str2</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">123</span><span class="dl">'</span>
+
+<span class="kd">type</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">boolean</span> <span class="o">|</span> <span class="mi">0</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">213</span><span class="dl">'</span>
+<span class="kd">let</span> <span class="nx">v</span><span class="p">:</span> <span class="nx">value</span> <span class="o">=</span> <span class="kc">true</span>
+
+<span class="c1">//******泛型******//</span>
+<span class="kd">function</span> <span class="nx">Sub</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span> <span class="nx">U</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">T</span><span class="p">,</span> <span class="nx">b</span><span class="p">:</span> <span class="nx">U</span><span class="p">):</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">T</span> <span class="o">|</span> <span class="nx">U</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="na">params</span><span class="p">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">T</span> <span class="o">|</span> <span class="nx">U</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nx">params</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">2</span><span class="dl">'</span><span class="p">))</span>
+
+<span class="kr">interface</span> <span class="nx">Len</span> <span class="p">{</span> <span class="c1">//泛型约束</span>
+    <span class="nl">length</span><span class="p">:</span> <span class="kr">number</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">getLegnth</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kd">extends</span> <span class="nx">Len</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">arg</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">arg</span><span class="p">.</span><span class="nx">length</span>
+<span class="p">}</span>
+<span class="nx">getLegnth</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">'</span><span class="s1">123</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="kd">function</span> <span class="nx">prop</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span> <span class="nx">K</span> <span class="kd">extends</span> <span class="kr">keyof</span> <span class="nx">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">obj</span><span class="p">:</span> <span class="nx">T</span><span class="p">,</span> <span class="nx">key</span><span class="p">:</span> <span class="nx">K</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span> <span class="na">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">b</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">c</span><span class="p">:</span> <span class="mi">3</span> <span class="p">}</span>
+<span class="nx">prop</span><span class="p">(</span><span class="nx">o</span><span class="p">,</span> <span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+:ET
