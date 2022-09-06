@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 美化你的终端
-subtitle: 受到cxd的启发
+subtitle: 受到Tmoe-zsh的启发
 author: RuntimeEroor
 categories: 软件配置
 tags: Powershell
