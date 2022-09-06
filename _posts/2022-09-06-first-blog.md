@@ -20,4 +20,4 @@ tags: jekyll
 
 # 发布文章
 
-在 `_posts` 新增Markdown文件就行了。
+在`_posts`新增Markdown文件就行了。
