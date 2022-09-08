@@ -1,0 +1,51 @@
+I"�
+<ol>
+  <li>
+    <h2 id="说在前面">说在前面</h2>
+
+    <p>别在Windows下装这个，超级麻烦的。如果大佬装成功了可以出个教程。</p>
+  </li>
+  <li>
+    <h2 id="下载-hadoop">下载 <code class="language-plaintext highlighter-rouge">Hadoop</code></h2>
+
+    <p><a href="https://mirrors.ustc.edu.cn/apache/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz">下载（中科大镜像站）</a>不知道为什么清华镜像站封了我的IP？</p>
+  </li>
+  <li>
+    <h2 id="安装配置ssh免密登录">安装配置SSH免密登录</h2>
+
+    <p>不太清楚Standalone模式是否还需要这个？
+ssh密钥应该在home目录下进行生成。</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ssh
+<span class="nb">sudo </span>apt <span class="nb">install </span>sshd
+ssh-keygen <span class="nt">-t</span> rsa
+<span class="nb">cat</span> ~/.ssh/id_rsa.pub <span class="o">&gt;&gt;</span> ~/.ssh/authorized_keys
+<span class="nb">chmod </span>og-wx ~/.ssh/authorized_keys
+ssh localhost <span class="c">#如果不需要密码就成功了</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h2 id="下载jdk">下载JDK</h2>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>openjdk-8-jdk
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h2 id="配置jdk环境变量">配置JDK环境变量</h2>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nano hadoop/etc/hadoop/hadoop-env.sh
+<span class="c">#添加下列</span>
+<span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/java/latest
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h2 id="运行">运行</h2>
+
+    <p>下面这段代码，找出了 <code class="language-plaintext highlighter-rouge">etc/hadoop/</code>中的 <code class="language-plaintext highlighter-rouge">xml</code>文件中符合 <code class="language-plaintext highlighter-rouge">dfs[a-z.]+</code>正则的例子以及出现次数</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>input
+<span class="nb">cp </span>etc/hadoop/<span class="k">*</span>.xml input
+bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.4.jar <span class="nb">grep </span>input output <span class="s1">'dfs[a-z.]+'</span>
+<span class="nb">cat </span>output/<span class="k">*</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+:ET
