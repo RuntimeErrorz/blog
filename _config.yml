@@ -24,6 +24,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+title: RuntimeErrorz的博客
+
 author:
   name: RuntimeErrorz
   employer: 电子科技大学信息与软件工程学院
