@@ -128,7 +128,7 @@ Security 强调的是免受来自外部或内部“蓄意或恶意”的伤害�
 
 ### SDL（**Secure Development Lifecycle**）
 
-![](/blog/static/boxcnMvfUvuNbbDnnDVJtUpgDDg.png)
+![](/static//boxcnMvfUvuNbbDnnDVJtUpgDDg.png)
 
 ## 软件安全测试
 

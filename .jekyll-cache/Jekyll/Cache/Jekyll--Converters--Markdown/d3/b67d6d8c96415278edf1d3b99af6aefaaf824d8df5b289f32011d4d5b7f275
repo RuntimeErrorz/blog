@@ -1,4 +1,4 @@
-I"�b<h2 id="操作系统引论">操作系统引论</h2>
+I"�b<h2 id="操作系统引论">操作系统引论</h2>
 
 <h3 id="定义">定义</h3>
 
@@ -358,11 +358,11 @@ $$</p>
   <li>预防：银行家算法</li>
 </ul>
 
-<p><img src="/blog/static/boxcnKRnI4J4RWLvvGVDUSm3Dwh.png" alt="" /></p>
+<p><img src="/static//boxcnKRnI4J4RWLvvGVDUSm3Dwh.png" alt="" /></p>
 
 <p>它表示系统可提供给进程继续运行所需的各类资源数目，初始值 Work：＝Available</p>
 
-<p><img src="/blog/static/boxcnCSO1Pr6r5JZQMtyB6hUmVf.png" alt="" /></p>
+<p><img src="/static//boxcnCSO1Pr6r5JZQMtyB6hUmVf.png" alt="" /></p>
 
 <h2 id="存储器管理">存储器管理</h2>
 
@@ -425,7 +425,7 @@ $$</p>
   <li>动态运行时装入（动态重定位）</li>
 </ul>
 
-<p><img src="/blog/static/boxcnUjYL9S0M1x4mqABbtL5ohg.png" alt="" /></p>
+<p><img src="/static//boxcnUjYL9S0M1x4mqABbtL5ohg.png" alt="" /></p>
 
 <h3 id="对换">对换</h3>
 
@@ -465,7 +465,7 @@ $$</p>
   <li>分区分配</li>
 </ul>
 
-<p><img src="/blog/static/boxcnGKesXixucfpCdd3maXKDgc.png" alt="" /></p>
+<p><img src="/static//boxcnGKesXixucfpCdd3maXKDgc.png" alt="" /></p>
 
 <ul>
   <li>快速适应算法</li>
@@ -479,7 +479,7 @@ $$</p>
   <li>伙伴系统</li>
 </ul>
 
-<p><img src="/blog/static/boxcndw8psUDW9nptdBmfa4eDqh.png" alt="" /></p>
+<p><img src="/static//boxcndw8psUDW9nptdBmfa4eDqh.png" alt="" /></p>
 
 <ul>
   <li>优点</li>
@@ -491,7 +491,7 @@ $$</p>
 
 <h4 id="可重定位分区分配">可重定位分区分配</h4>
 
-<p><img src="/blog/static/boxcn1kNHxf6BTwK6SSKAMyG2Bd.png" alt="" /></p>
+<p><img src="/static//boxcn1kNHxf6BTwK6SSKAMyG2Bd.png" alt="" /></p>
 
 <ul>
   <li>通过作业移动将原来分散的小分区拼接成一个大分区。</li>
@@ -516,9 +516,9 @@ $$</p>
   <li>空闲块表：整个系统 1 张，记录主存当前空闲块。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnZEoBs26xlr8YnERuiBv77B.png" alt="" /></p>
+<p><img src="/static//boxcnZEoBs26xlr8YnERuiBv77B.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnU2cSNHhVKUZTV66jf4yPhb.png" alt="" /></p>
+<p><img src="/static//boxcnU2cSNHhVKUZTV66jf4yPhb.png" alt="" /></p>
 
 <ul>
   <li>地址转换</li>
@@ -526,14 +526,14 @@ $$</p>
   <li>当进程真正投入运行时，从进程控制块 PCB 中读出其页表起始地址，并用它设置页表寄存器，以后地址转换时直接从 PTR 中获得页表的起始地址。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnDOj7nXFDyR6h8OHiG72kxb.png" alt="" /></p>
+<p><img src="/static//boxcnDOj7nXFDyR6h8OHiG72kxb.png" alt="" /></p>
 
 <ul>
   <li>快表</li>
   <li>为了提高地址变换速度，为进程页表设置一个专用的高速缓冲存储器，称为快表、TLB(Translation Lookaside Buffer)， 或联想存储器（Associative Memory）专门保存当前进程最近访问过的一组页表项。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnH0Rgsxu5AP3uDGBJhfjESe.png" alt="" /></p>
+<p><img src="/static//boxcnH0Rgsxu5AP3uDGBJhfjESe.png" alt="" /></p>
 
 <ul>
   <li>多级页表</li>
@@ -566,19 +566,19 @@ $$</p>
   <li>段表</li>
 </ul>
 
-<p><img src="/blog/static/boxcnY9SSCpHXTbssFY7dszCgne.png" alt="" /></p>
+<p><img src="/static//boxcnY9SSCpHXTbssFY7dszCgne.png" alt="" /></p>
 
 <ul>
   <li>地址变换机构</li>
 </ul>
 
-<p><img src="/blog/static/boxcnxuWDuIj5l46xcTUFHpUmcc.png" alt="" /></p>
+<p><img src="/static//boxcnxuWDuIj5l46xcTUFHpUmcc.png" alt="" /></p>
 
 <ul>
   <li>快表</li>
 </ul>
 
-<p><img src="/blog/static/boxcn6h5wDtzD2Oq3RSNJkWmtKd.png" alt="" /></p>
+<p><img src="/static//boxcn6h5wDtzD2Oq3RSNJkWmtKd.png" alt="" /></p>
 
 <ul>
   <li>信息共享</li>
@@ -588,7 +588,7 @@ $$</p>
   <li>为了实现分段共享，可在系统中配置一张共享段表，所有共享段都在共享段表中占有一个表项。</li>
 </ul>
 
-<p><img src="/blog/static/boxcndrTJfsnk3NuwQoYvakUFze.png" alt="" /></p>
+<p><img src="/static//boxcndrTJfsnk3NuwQoYvakUFze.png" alt="" /></p>
 
 <ul>
   <li>分配与回收</li>
@@ -611,7 +611,7 @@ $$</p>
   <li>先将用户程序分段，每段内再划分成若干页，每段有段名（段号），每段内 部的页有一连续的页号。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnsjE7vNMiGlqngH6WOuL12g.png" alt="" /></p>
+<p><img src="/static//boxcnsjE7vNMiGlqngH6WOuL12g.png" alt="" /></p>
 
 <h4 id="比较">比较</h4>
 
@@ -650,7 +650,7 @@ $$</p>
   <li>当内存不足时，允许程序部分换入、换出。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnpjQ9kdPgSy3eNmDcMSdjF3.png" alt="" /></p>
+<p><img src="/static//boxcnpjQ9kdPgSy3eNmDcMSdjF3.png" alt="" /></p>
 
 <h4 id="特征">特征</h4>
 
@@ -727,13 +727,13 @@ $$</p>
   <li>缺段中断机构</li>
 </ol>
 
-<p><img src="/blog/static/boxcnuqRHht0NZ4laD2JF5gTWfc.png" alt="" /></p>
+<p><img src="/static//boxcnuqRHht0NZ4laD2JF5gTWfc.png" alt="" /></p>
 
 <ol>
   <li>地址变换机构</li>
 </ol>
 
-<p><img src="/blog/static/boxcnl3GOQMf52pUHx8h8chPEYg.png" alt="" /></p>
+<p><img src="/static//boxcnl3GOQMf52pUHx8h8chPEYg.png" alt="" /></p>
 
 <ol>
   <li>软件支持</li>
@@ -982,9 +982,9 @@ $$</p>
   <li>通常，设备并不是直接与 CPU 进行通信，而是与设备控制器通信，因此，在设备与设备控制器之间应有一如下所示接口。</li>
 </ul>
 
-<p><img src="/blog/static/boxcn0lvIG3aune1gx2WfrVeVEc.png" alt="" /></p>
+<p><img src="/static//boxcn0lvIG3aune1gx2WfrVeVEc.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnxUchWVf1fwSM67buFPc9qc.png" alt="" /></p>
+<p><img src="/static//boxcnxUchWVf1fwSM67buFPc9qc.png" alt="" /></p>
 
 <ol>
   <li>I/O 通道：一种特殊的执行 I/O 指令的处理机</li>
@@ -997,7 +997,7 @@ $$</p>
   <li>可实现 CPU、通道和 I/O 设备三者的并行操作，从而更有效地提高整个系统的资源利用率。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnvO36EpPKDsbNhNBCOvxuQf.png" alt="" /></p>
+<p><img src="/static//boxcnvO36EpPKDsbNhNBCOvxuQf.png" alt="" /></p>
 
 <h3 id="中断机构和中断处理程序">中断机构和中断处理程序</h3>
 
@@ -1072,7 +1072,7 @@ $$</p>
   <li>当 CPU 要从磁盘读入一数据块时，便向磁盘控制器发送一条读命令。该命令被送入命令寄存器 CR 中。同时，需要将本次要读入数据在内存的起始目标地址送入内存地址寄存器 MAR 中。将要读数据的字(节)数送入数据计数器 DC 中。还须将磁盘中的源地址直接送至 DMA 控制器的 IO 控制逻辑上。然后，启动 DMA 控制器进行数据传送。以后，CPU 便可去处理其它任务，整个数据传送过程由 DMA 控制器进行控制。当 DMA 控制器已从磁盘中读入一个字(节)的数据，并送入数据寄存器 DR 后，再挪用一个存储器周期，将该字(节)传送到 MAR 所指示的内存单元中。然后便对 MAR 内容加 1，将 DC 内容减 1，若减 1 后 DC 内容不为 0，表示传送未完，便继续传送下一个字(节);否则，由 DMA 控制器发出中断请求。图 6-15 是 DMA 方式的工作流程。</li>
 </ul>
 
-<p><img src="/blog/static/boxcn4FdCi3ERMqpvr97upU84ch.png" alt="" /></p>
+<p><img src="/static//boxcn4FdCi3ERMqpvr97upU84ch.png" alt="" /></p>
 
 <ul>
   <li>I/O 通道控制方式</li>
@@ -1080,7 +1080,7 @@ $$</p>
   <li>可实现 CPU、通道和 I/O 设备三者的并行操作，从而更有效地提高整个系统的资源利用率。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnXwsNgUHdZnGYRNFTGPjqbc.png" alt="" /></p>
+<p><img src="/static//boxcnXwsNgUHdZnGYRNFTGPjqbc.png" alt="" /></p>
 
 <h3 id="与设备无关的-io-软件">与设备无关的 I/O 软件</h3>
 
@@ -1170,7 +1170,7 @@ $$</p>
   <li>若文件中的数据有格式，可能是如下的结构</li>
 </ul>
 
-<p><img src="/blog/static/boxcnkKuJKvea4DKA968Gv7AGoe.png" alt="" /></p>
+<p><img src="/static//boxcnkKuJKvea4DKA968Gv7AGoe.png" alt="" /></p>
 
 <ul>
   <li>在有结构的文件中，文件由若干个相关记录组成；</li>
@@ -1431,7 +1431,7 @@ $$</p>
   <li>在建立一个文件时，只需在为之建立的目录项中填上指向 该索引块的指针。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnDB8dTyPNX19kvwgJKOqU9d.png" alt="" /></p>
+<p><img src="/static//boxcnDB8dTyPNX19kvwgJKOqU9d.png" alt="" /></p>
 
 <ul>
   <li>二级索引</li>
@@ -1513,7 +1513,7 @@ $$</p>
   <li>最后不满 100 块的那组空闲块总数和各空闲块块号计入磁盘 区专用管理块（超级块）的空闲盘块号栈的 s_nfree 和 s_free[100]中，其数据结构如下页所示。</li>
 </ul>
 
-<p><img src="/blog/static/boxcnkHkT8juSECTe244blZY9Xd.png" alt="" /></p>
+<p><img src="/static//boxcnkHkT8juSECTe244blZY9Xd.png" alt="" /></p>
 
 <ul>
   <li>分配</li>
@@ -1589,7 +1589,7 @@ $$</p>
 
 <h3 id="银行家">银行家</h3>
 
-<p><img src="/blog/static/boxcno0g0xnuzGHHGfyJoQj35ng.png" alt="" /></p>
+<p><img src="/static//boxcno0g0xnuzGHHGfyJoQj35ng.png" alt="" /></p>
 
 <h3 id="pv-操作">PV 操作</h3>
 
@@ -2284,7 +2284,7 @@ echo"Change times has reached two, exit."
 
 <p>1.<strong>（进制转换）</strong></p>
 
-<p><img src="/blog/static/boxcncKU5r2EV75BPjVzLfP2EWc.png" alt="" /></p>
+<p><img src="/static//boxcncKU5r2EV75BPjVzLfP2EWc.png" alt="" /></p>
 
 <ul>
   <li>页面大小 1KB，则页内偏移 10 位</li>
@@ -2299,7 +2299,7 @@ echo"Change times has reached two, exit."
   <li>位示图</li>
 </ol>
 
-<p><img src="/blog/static/boxcnmSV4s3gLUX4BGPKdVzRZTe.png" alt="" /></p>
+<p><img src="/static//boxcnmSV4s3gLUX4BGPKdVzRZTe.png" alt="" /></p>
 
 <ul>
   <li>页号         块号</li>

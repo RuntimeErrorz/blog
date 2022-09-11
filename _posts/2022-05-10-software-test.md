@@ -105,9 +105,9 @@ SQA 是一项软件质量管理性工作，侧重于对软件开发流程进行�
 - 需求可溯性
 - 代码复杂度
 
-![](/blog/static/boxcnjPqoLXj1eUnmMRW6LW5IAe.png)
+![](/static//boxcnjPqoLXj1eUnmMRW6LW5IAe.png)
 
-![](/blog/static/boxcnMR4cokJPBIe6vye6I16fHe.png)
+![](/static//boxcnMR4cokJPBIe6vye6I16fHe.png)
 
 静态测试:指对系统需求规格说明书、系统设计规格说明书进行评审，对程序代码进行审查及静态分析等测试活动;
 
@@ -126,7 +126,7 @@ SQA 是一项软件质量管理性工作，侧重于对软件开发流程进行�
 
 静态分析是对软件的源代码进行研读，查找错误或收集一些度量数据，并不需要对代码进行编译和仿真运行
 
-![](/blog/static/boxcnXqgdXg132aP4dphi9R7Pre.png)
+![](/static//boxcnXqgdXg132aP4dphi9R7Pre.png)
 
 黑盒测试：不考虑内部结构和特性进行功能测试，是从用户观点出发开展的测试，目的是尽可能发现软件的外部行为错误
 
@@ -158,11 +158,11 @@ SQA 是一项软件质量管理性工作，侧重于对软件开发流程进行�
 
 ### 课堂习题
 
-![](/blog/static/boxcnNwdc4ym2faIGx0gL4N5Qzb.png)
+![](/static//boxcnNwdc4ym2faIGx0gL4N5Qzb.png)
 
 DDB
 
-![](/blog/static/boxcnfIvLNoFAwtUs6TulW3mkU4.png)
+![](/static//boxcnfIvLNoFAwtUs6TulW3mkU4.png)
 
 CBD
 
@@ -175,20 +175,20 @@ CBD
 5. 边界值就是大于小于没有等于
 6. 因果图（**使用形式化规格描述输入组合**）
 
-![](/blog/static/boxcnsgTXv35vC0Qot4ZYwGXxXf.png)
+![](/static//boxcnsgTXv35vC0Qot4ZYwGXxXf.png)
 
-![](/blog/static/boxcnGOlUdYVNdPNrp6GXjrMSNb.png)
+![](/static//boxcnGOlUdYVNdPNrp6GXjrMSNb.png)
 
 7. 判定表
 
-![](/blog/static/boxcnzgWiu43Rq9FRHVVnbPL0Og.png)
+![](/static//boxcnzgWiu43Rq9FRHVVnbPL0Og.png)
 
-![](/blog/static/boxcnwOU5wlaLUAKqecc5cqEN3e.png)
+![](/static//boxcnwOU5wlaLUAKqecc5cqEN3e.png)
 
 8. 成对组合测试：每一列从上往下看排列
 9. 正交实验法（**多因素多值域**） ：
 
-![](/blog/static/boxcn1BYyIZRUjs8AvZERU5awOg.png)
+![](/static//boxcn1BYyIZRUjs8AvZERU5awOg.png)
 
 ```
  水平数等于输入取值数（有、无），因子数等于有多少种不同的输入（员工号，学号，邮箱），行数等于因字数*(水平数-1)+1
@@ -209,24 +209,24 @@ CBD
 
 14. 条件组合覆盖：满足“条件组合覆盖”的测试用例是一定满足 “判定覆盖”、“条件覆盖”和“判定-条件覆盖” 。所有子条件的组合情况
 
-![](/blog/static/boxcnttKdhVgajqYESPtb96phDe.png)
+![](/static//boxcnttKdhVgajqYESPtb96phDe.png)
 
 15. 基本路径覆盖（数量等于基本路径数 +1），每个判定标准反转
 16. 课后题目：
 
-![](/blog/static/boxcn9xJXwP1YkfmEyqmPcFHlHB.png)
+![](/static//boxcn9xJXwP1YkfmEyqmPcFHlHB.png)
 
 XDC
 
-![](/blog/static/boxcnEKBtJn8xtK3MfMdVmIFdRe.png)
+![](/static//boxcnEKBtJn8xtK3MfMdVmIFdRe.png)
 
 BBBA
 
-![](/blog/static/boxcnhAbeFHCoWDHeTL1mcQsBlh.png)
+![](/static//boxcnhAbeFHCoWDHeTL1mcQsBlh.png)
 
 BA
 
-![](/blog/static/boxcnpa02W0SLBEAfzPiEvYiJNd.png)
+![](/static//boxcnpa02W0SLBEAfzPiEvYiJNd.png)
 
 BB
 
@@ -234,29 +234,29 @@ BB
 
 ### 软件测试过程的活动
 
-![](/blog/static/boxcnNaPcNfRLGlLEWgOV4dGPjb.png)
+![](/static//boxcnNaPcNfRLGlLEWgOV4dGPjb.png)
 
 ### 软件测试过程的活动
 
-![](/blog/static/boxcnv4qPTI3trf5QIbrjkk5I5f.png)
+![](/static//boxcnv4qPTI3trf5QIbrjkk5I5f.png)
 
 ### 测试阶段输入输出
 
-![](/blog/static/boxcnr1M1tnLkKnMUXbEslcYPHg.png)
+![](/static//boxcnr1M1tnLkKnMUXbEslcYPHg.png)
 
 ### 软件开发与软件测试的 W 模型关系
 
-![](/blog/static/boxcnYqjJ6cuoSNHA17Ag24mygf.png)
+![](/static//boxcnYqjJ6cuoSNHA17Ag24mygf.png)
 
-![](/blog/static/boxcnk0XWM7kXxmvFjlwD0OM6Ke.png)
+![](/static//boxcnk0XWM7kXxmvFjlwD0OM6Ke.png)
 
 ### TMAP 测试模型
 
 业务驱动的、基于风险策略的、结构化的测试管理方法，其目标是尽早地发现缺陷，以最小的成本、有效地、彻底地完成测试任务。
 
-![](/blog/static/boxcn0tPZRZSK01Z1FFKFlLaWwe.png)
+![](/static//boxcn0tPZRZSK01Z1FFKFlLaWwe.png)
 
-![](/blog/static/boxcn5AJtxBeWMs3YB1W829qiCg.png)
+![](/static//boxcn5AJtxBeWMs3YB1W829qiCg.png)
 
 三个基石 坚实的组织融合（O） 正确的基础设施和工具（I） 可用的技术（T）
 
@@ -283,7 +283,7 @@ BB
 
 ### 课堂练习
 
-![](/blog/static/boxcnKoU9slqMGCPwqgozulzO0b.png)
+![](/static//boxcnKoU9slqMGCPwqgozulzO0b.png)
 
 C
 
@@ -320,35 +320,35 @@ ACBA
 - 渐增式集成测试
 - 自顶向下增量集成测试
 
-![](/blog/static/boxcn06dBU7f2MtGENm5lDLsvpq.png)
+![](/static//boxcn06dBU7f2MtGENm5lDLsvpq.png)
 
 - 自底向上增量集成测试
 
-![](/blog/static/boxcnwA2sAnT6dED1aG3gEQ0d3c.png)
+![](/static//boxcnwA2sAnT6dED1aG3gEQ0d3c.png)
 
 - 三明治增量集成测试
 
-![](/blog/static/boxcnpVG2olfsQe7t6BcXvqSMCf.png)
+![](/static//boxcnpVG2olfsQe7t6BcXvqSMCf.png)
 
 - 改进的三明治集成测试
 
-![](/blog/static/boxcn70uK1vc2WPsOMuJChmDhge.png)
+![](/static//boxcn70uK1vc2WPsOMuJChmDhge.png)
 
-![](/blog/static/boxcn9av5sYQlyYf5VqPgecXNpg.png)
+![](/static//boxcn9av5sYQlyYf5VqPgecXNpg.png)
 
 ### 课堂练习
 
-![](/blog/static/boxcnhI3SdJyFYvN8NdaeNfMgzb.png)
+![](/static//boxcnhI3SdJyFYvN8NdaeNfMgzb.png)
 
 CADCD
 
-![](/blog/static/boxcnyIm8I3l5Wkfn3gy5RPL1rd.png)
+![](/static//boxcnyIm8I3l5Wkfn3gy5RPL1rd.png)
 
 DDCDD
 
 ## 系统测试
 
-![](/blog/static/boxcnlp1qF2dL9NKXXOCz49Tyle.png)
+![](/static//boxcnlp1qF2dL9NKXXOCz49Tyle.png)
 
 ### 系统级功能测试
 
@@ -373,7 +373,7 @@ DDCDD
 
 ### 系统安全测试
 
-![](/blog/static/boxcngZr5jwz5mcnkSGRTV97eJe.png)
+![](/static//boxcngZr5jwz5mcnkSGRTV97eJe.png)
 
 ### 容错性测试
 
@@ -383,11 +383,11 @@ DDCDD
 
 ### 课堂练习
 
-![](/blog/static/boxcnS4KimZht5fnMQ71bIhPQ4g.png)
+![](/static//boxcnS4KimZht5fnMQ71bIhPQ4g.png)
 
 CCCBB
 
-![](/blog/static/boxcnc38gYye4magiH056bmvhkh.png)
+![](/static//boxcnc38gYye4magiH056bmvhkh.png)
 
 D D D A C
 
@@ -395,11 +395,11 @@ D D D A C
 
 ### 验收测试内容
 
-![](/blog/static/boxcnum5q9VuZhAefElfl4UiVjh.png)
+![](/static//boxcnum5q9VuZhAefElfl4UiVjh.png)
 
 ### 产品规格说明书验证
 
-![](/blog/static/boxcnnTRinOIkB39x0xAZVeJiJf.png)
+![](/static//boxcnnTRinOIkB39x0xAZVeJiJf.png)
 
 ### 用户界面测试与可用性测试
 
@@ -416,11 +416,11 @@ D D D A C
 
 ### 课堂练习
 
-![](/blog/static/boxcnyjEWc5fz8PImCAzQpnveic.png)
+![](/static//boxcnyjEWc5fz8PImCAzQpnveic.png)
 
 ABDCD
 
-![](/blog/static/boxcnN0lxZY07sJNLFWVCqMcVFh.png)
+![](/static//boxcnN0lxZY07sJNLFWVCqMcVFh.png)
 
 CBBDA
 
@@ -432,7 +432,7 @@ CBBDA
 
 ### 课堂练习
 
-![](/blog/static/boxcnGJ0Ahzk5iWzf1dQoT3HJvb.png)
+![](/static//boxcnGJ0Ahzk5iWzf1dQoT3HJvb.png)
 
 ADA
 
@@ -442,43 +442,43 @@ ADA
 
 ### 原理
 
-![](/blog/static/boxcnGvdCLHAk5SSkEKNrjtlDCe.png)
+![](/static//boxcnGvdCLHAk5SSkEKNrjtlDCe.png)
 
 ### 功能测试工具特性要求
 
-![](/blog/static/boxcnGu9lvvHLfwqM7rn6dtLZDb.png)
+![](/static//boxcnGu9lvvHLfwqM7rn6dtLZDb.png)
 
 ### 性能测试工具特性要求
 
-![](/blog/static/boxcnk5nY5vgEVYRLjqXqel7lZc.png)
+![](/static//boxcnk5nY5vgEVYRLjqXqel7lZc.png)
 
 ### 课堂练习
 
-![](/blog/static/boxcn4Q08CHsDktwl1zOg4DBOCc.png)
+![](/static//boxcn4Q08CHsDktwl1zOg4DBOCc.png)
 
 DC**D**CB
 
-![](/blog/static/boxcnnuPtnlmp4hxHAQVF8IusMg.png)
+![](/static//boxcnnuPtnlmp4hxHAQVF8IusMg.png)
 
 ## 测试需求分析与测试计划
 
 ### 测试目标与准则
 
-![](/blog/static/boxcnkV5SXbgnbUljjOUmUzr2Sc.png)
+![](/static//boxcnkV5SXbgnbUljjOUmUzr2Sc.png)
 
 ### 测试需求分析
 
-![](/blog/static/boxcngEIEKRgIMdV2YSEAPnFyse.png)
+![](/static//boxcngEIEKRgIMdV2YSEAPnFyse.png)
 
-![](/blog/static/boxcndKa2zuSmhptvR3IYdUYttf.png)
+![](/static//boxcndKa2zuSmhptvR3IYdUYttf.png)
 
-![](/blog/static/boxcnXTLscCvViYUKyegtPyQ9uc.png)
+![](/static//boxcnXTLscCvViYUKyegtPyQ9uc.png)
 
 ### 测试项目估算与进度安排
 
 - 依据
 
-![](/blog/static/boxcn1FWIoA2wI0PBoWeMqPCYQh.png)
+![](/static//boxcn1FWIoA2wI0PBoWeMqPCYQh.png)
 
 - 甘特图（进度安排）
 
@@ -488,7 +488,7 @@ DC**D**CB
 
 ### 课堂练习
 
-![](/blog/static/boxcnPVjqY1nI3N3hPKNG6pd4Fk.png)
+![](/static//boxcnPVjqY1nI3N3hPKNG6pd4Fk.png)
 
 DBDAC
 
@@ -500,6 +500,6 @@ DBDAC
 
 ### 课堂练习
 
-![](/blog/static/boxcn3R5Umqdau2SLEwdSjzEYQe.png)
+![](/static//boxcn3R5Umqdau2SLEwdSjzEYQe.png)
 
 DDDDC

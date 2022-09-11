@@ -24,9 +24,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: RuntimeBlog
-email: zdyjackpot@gmail.com
-author: RuntimeErroz
+author:
+  name: RuntimeErrorz
+  employer: 电子科技大学信息与软件工程学院
+  email: zdyjackpot@gmail.com
+  copyleft: (cleft)
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
@@ -41,15 +43,35 @@ author: RuntimeErroz
 #   "Copyright © 2017-2021 Foobar"
 #
 copyright: "{currentYear} (cleft) {author} 电子科技大学信息与软件工程学院 | {email}"
-
+footer_info:
+  poweredby:
+    - "Jekyll"
+    - "Jekyll is a simple, blog-aware, static site generator"
+    - "http://jekyllrb.com/"
+  courtesy:
+    - [
+        "Yat Theme",
+        "Yat, yet another theme",
+        "https://github.com/jeffreytse/jekyll-theme-yat",
+      ]
+    - [
+        "Font Awesome",
+        "The web's most popular icon set and toolkit",
+        "https://fontawesome.com",
+      ]
+    - [
+        "highlight.js",
+        "Syntax highlighting for the Web",
+        "https://highlightjs.org/",
+      ]
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://runtimeerrorz.github.io" # the base hostname & protocol for your site, e.g. https://example.com
-favicon: "/blog/assets/icon.png" # the favicon for your site
+favicon: "/assets/icon.png" # the favicon for your site
 
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this

@@ -1,4 +1,4 @@
-I"�G<h1 id="软件测试">软件测试</h1>
+I"�G<h1 id="软件测试">软件测试</h1>
 
 <h2 id="引论">引论</h2>
 
@@ -111,9 +111,9 @@
   <li>代码复杂度</li>
 </ul>
 
-<p><img src="/blog/static/boxcnjPqoLXj1eUnmMRW6LW5IAe.png" alt="" /></p>
+<p><img src="/static//boxcnjPqoLXj1eUnmMRW6LW5IAe.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnMR4cokJPBIe6vye6I16fHe.png" alt="" /></p>
+<p><img src="/static//boxcnMR4cokJPBIe6vye6I16fHe.png" alt="" /></p>
 
 <p>静态测试:指对系统需求规格说明书、系统设计规格说明书进行评审，对程序代码进行审查及静态分析等测试活动;</p>
 
@@ -134,7 +134,7 @@
 
 <p>静态分析是对软件的源代码进行研读，查找错误或收集一些度量数据，并不需要对代码进行编译和仿真运行</p>
 
-<p><img src="/blog/static/boxcnXqgdXg132aP4dphi9R7Pre.png" alt="" /></p>
+<p><img src="/static//boxcnXqgdXg132aP4dphi9R7Pre.png" alt="" /></p>
 
 <p>黑盒测试：不考虑内部结构和特性进行功能测试，是从用户观点出发开展的测试，目的是尽可能发现软件的外部行为错误</p>
 
@@ -170,11 +170,11 @@
 
 <h3 id="课堂习题">课堂习题</h3>
 
-<p><img src="/blog/static/boxcnNwdc4ym2faIGx0gL4N5Qzb.png" alt="" /></p>
+<p><img src="/static//boxcnNwdc4ym2faIGx0gL4N5Qzb.png" alt="" /></p>
 
 <p>DDB</p>
 
-<p><img src="/blog/static/boxcnfIvLNoFAwtUs6TulW3mkU4.png" alt="" /></p>
+<p><img src="/static//boxcnfIvLNoFAwtUs6TulW3mkU4.png" alt="" /></p>
 
 <p>CBD</p>
 
@@ -189,24 +189,24 @@
   <li>因果图（<strong>使用形式化规格描述输入组合</strong>）</li>
 </ol>
 
-<p><img src="/blog/static/boxcnsgTXv35vC0Qot4ZYwGXxXf.png" alt="" /></p>
+<p><img src="/static//boxcnsgTXv35vC0Qot4ZYwGXxXf.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnGOlUdYVNdPNrp6GXjrMSNb.png" alt="" /></p>
+<p><img src="/static//boxcnGOlUdYVNdPNrp6GXjrMSNb.png" alt="" /></p>
 
 <ol>
   <li>判定表</li>
 </ol>
 
-<p><img src="/blog/static/boxcnzgWiu43Rq9FRHVVnbPL0Og.png" alt="" /></p>
+<p><img src="/static//boxcnzgWiu43Rq9FRHVVnbPL0Og.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnwOU5wlaLUAKqecc5cqEN3e.png" alt="" /></p>
+<p><img src="/static//boxcnwOU5wlaLUAKqecc5cqEN3e.png" alt="" /></p>
 
 <ol>
   <li>成对组合测试：每一列从上往下看排列</li>
   <li>正交实验法（<strong>多因素多值域</strong>） ：</li>
 </ol>
 
-<p><img src="/blog/static/boxcn1BYyIZRUjs8AvZERU5awOg.png" alt="" /></p>
+<p><img src="/static//boxcn1BYyIZRUjs8AvZERU5awOg.png" alt="" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 水平数等于输入取值数（有、无），因子数等于有多少种不同的输入（员工号，学号，邮箱），行数等于因字数*(水平数-1)+1
 </code></pre></div></div>
@@ -232,26 +232,26 @@
   <li>条件组合覆盖：满足“条件组合覆盖”的测试用例是一定满足 “判定覆盖”、“条件覆盖”和“判定-条件覆盖” 。所有子条件的组合情况</li>
 </ol>
 
-<p><img src="/blog/static/boxcnttKdhVgajqYESPtb96phDe.png" alt="" /></p>
+<p><img src="/static//boxcnttKdhVgajqYESPtb96phDe.png" alt="" /></p>
 
 <ol>
   <li>基本路径覆盖（数量等于基本路径数 +1），每个判定标准反转</li>
   <li>课后题目：</li>
 </ol>
 
-<p><img src="/blog/static/boxcn9xJXwP1YkfmEyqmPcFHlHB.png" alt="" /></p>
+<p><img src="/static//boxcn9xJXwP1YkfmEyqmPcFHlHB.png" alt="" /></p>
 
 <p>XDC</p>
 
-<p><img src="/blog/static/boxcnEKBtJn8xtK3MfMdVmIFdRe.png" alt="" /></p>
+<p><img src="/static//boxcnEKBtJn8xtK3MfMdVmIFdRe.png" alt="" /></p>
 
 <p>BBBA</p>
 
-<p><img src="/blog/static/boxcnhAbeFHCoWDHeTL1mcQsBlh.png" alt="" /></p>
+<p><img src="/static//boxcnhAbeFHCoWDHeTL1mcQsBlh.png" alt="" /></p>
 
 <p>BA</p>
 
-<p><img src="/blog/static/boxcnpa02W0SLBEAfzPiEvYiJNd.png" alt="" /></p>
+<p><img src="/static//boxcnpa02W0SLBEAfzPiEvYiJNd.png" alt="" /></p>
 
 <p>BB</p>
 
@@ -259,29 +259,29 @@
 
 <h3 id="软件测试过程的活动">软件测试过程的活动</h3>
 
-<p><img src="/blog/static/boxcnNaPcNfRLGlLEWgOV4dGPjb.png" alt="" /></p>
+<p><img src="/static//boxcnNaPcNfRLGlLEWgOV4dGPjb.png" alt="" /></p>
 
 <h3 id="软件测试过程的活动-1">软件测试过程的活动</h3>
 
-<p><img src="/blog/static/boxcnv4qPTI3trf5QIbrjkk5I5f.png" alt="" /></p>
+<p><img src="/static//boxcnv4qPTI3trf5QIbrjkk5I5f.png" alt="" /></p>
 
 <h3 id="测试阶段输入输出">测试阶段输入输出</h3>
 
-<p><img src="/blog/static/boxcnr1M1tnLkKnMUXbEslcYPHg.png" alt="" /></p>
+<p><img src="/static//boxcnr1M1tnLkKnMUXbEslcYPHg.png" alt="" /></p>
 
 <h3 id="软件开发与软件测试的-w-模型关系">软件开发与软件测试的 W 模型关系</h3>
 
-<p><img src="/blog/static/boxcnYqjJ6cuoSNHA17Ag24mygf.png" alt="" /></p>
+<p><img src="/static//boxcnYqjJ6cuoSNHA17Ag24mygf.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnk0XWM7kXxmvFjlwD0OM6Ke.png" alt="" /></p>
+<p><img src="/static//boxcnk0XWM7kXxmvFjlwD0OM6Ke.png" alt="" /></p>
 
 <h3 id="tmap-测试模型">TMAP 测试模型</h3>
 
 <p>业务驱动的、基于风险策略的、结构化的测试管理方法，其目标是尽早地发现缺陷，以最小的成本、有效地、彻底地完成测试任务。</p>
 
-<p><img src="/blog/static/boxcn0tPZRZSK01Z1FFKFlLaWwe.png" alt="" /></p>
+<p><img src="/static//boxcn0tPZRZSK01Z1FFKFlLaWwe.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcn5AJtxBeWMs3YB1W829qiCg.png" alt="" /></p>
+<p><img src="/static//boxcn5AJtxBeWMs3YB1W829qiCg.png" alt="" /></p>
 
 <p>三个基石 坚实的组织融合（O） 正确的基础设施和工具（I） 可用的技术（T）</p>
 
@@ -310,7 +310,7 @@
 
 <h3 id="课堂练习">课堂练习</h3>
 
-<p><img src="/blog/static/boxcnKoU9slqMGCPwqgozulzO0b.png" alt="" /></p>
+<p><img src="/static//boxcnKoU9slqMGCPwqgozulzO0b.png" alt="" /></p>
 
 <p>C</p>
 
@@ -353,41 +353,41 @@
   <li>自顶向下增量集成测试</li>
 </ul>
 
-<p><img src="/blog/static/boxcn06dBU7f2MtGENm5lDLsvpq.png" alt="" /></p>
+<p><img src="/static//boxcn06dBU7f2MtGENm5lDLsvpq.png" alt="" /></p>
 
 <ul>
   <li>自底向上增量集成测试</li>
 </ul>
 
-<p><img src="/blog/static/boxcnwA2sAnT6dED1aG3gEQ0d3c.png" alt="" /></p>
+<p><img src="/static//boxcnwA2sAnT6dED1aG3gEQ0d3c.png" alt="" /></p>
 
 <ul>
   <li>三明治增量集成测试</li>
 </ul>
 
-<p><img src="/blog/static/boxcnpVG2olfsQe7t6BcXvqSMCf.png" alt="" /></p>
+<p><img src="/static//boxcnpVG2olfsQe7t6BcXvqSMCf.png" alt="" /></p>
 
 <ul>
   <li>改进的三明治集成测试</li>
 </ul>
 
-<p><img src="/blog/static/boxcn70uK1vc2WPsOMuJChmDhge.png" alt="" /></p>
+<p><img src="/static//boxcn70uK1vc2WPsOMuJChmDhge.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcn9av5sYQlyYf5VqPgecXNpg.png" alt="" /></p>
+<p><img src="/static//boxcn9av5sYQlyYf5VqPgecXNpg.png" alt="" /></p>
 
 <h3 id="课堂练习-1">课堂练习</h3>
 
-<p><img src="/blog/static/boxcnhI3SdJyFYvN8NdaeNfMgzb.png" alt="" /></p>
+<p><img src="/static//boxcnhI3SdJyFYvN8NdaeNfMgzb.png" alt="" /></p>
 
 <p>CADCD</p>
 
-<p><img src="/blog/static/boxcnyIm8I3l5Wkfn3gy5RPL1rd.png" alt="" /></p>
+<p><img src="/static//boxcnyIm8I3l5Wkfn3gy5RPL1rd.png" alt="" /></p>
 
 <p>DDCDD</p>
 
 <h2 id="系统测试-1">系统测试</h2>
 
-<p><img src="/blog/static/boxcnlp1qF2dL9NKXXOCz49Tyle.png" alt="" /></p>
+<p><img src="/static//boxcnlp1qF2dL9NKXXOCz49Tyle.png" alt="" /></p>
 
 <h3 id="系统级功能测试">系统级功能测试</h3>
 
@@ -416,7 +416,7 @@
 
 <h3 id="系统安全测试">系统安全测试</h3>
 
-<p><img src="/blog/static/boxcngZr5jwz5mcnkSGRTV97eJe.png" alt="" /></p>
+<p><img src="/static//boxcngZr5jwz5mcnkSGRTV97eJe.png" alt="" /></p>
 
 <h3 id="容错性测试">容错性测试</h3>
 
@@ -426,11 +426,11 @@
 
 <h3 id="课堂练习-2">课堂练习</h3>
 
-<p><img src="/blog/static/boxcnS4KimZht5fnMQ71bIhPQ4g.png" alt="" /></p>
+<p><img src="/static//boxcnS4KimZht5fnMQ71bIhPQ4g.png" alt="" /></p>
 
 <p>CCCBB</p>
 
-<p><img src="/blog/static/boxcnc38gYye4magiH056bmvhkh.png" alt="" /></p>
+<p><img src="/static//boxcnc38gYye4magiH056bmvhkh.png" alt="" /></p>
 
 <p>D D D A C</p>
 
@@ -438,11 +438,11 @@
 
 <h3 id="验收测试内容">验收测试内容</h3>
 
-<p><img src="/blog/static/boxcnum5q9VuZhAefElfl4UiVjh.png" alt="" /></p>
+<p><img src="/static//boxcnum5q9VuZhAefElfl4UiVjh.png" alt="" /></p>
 
 <h3 id="产品规格说明书验证">产品规格说明书验证</h3>
 
-<p><img src="/blog/static/boxcnnTRinOIkB39x0xAZVeJiJf.png" alt="" /></p>
+<p><img src="/static//boxcnnTRinOIkB39x0xAZVeJiJf.png" alt="" /></p>
 
 <h3 id="用户界面测试与可用性测试">用户界面测试与可用性测试</h3>
 
@@ -461,11 +461,11 @@
 
 <h3 id="课堂练习-3">课堂练习</h3>
 
-<p><img src="/blog/static/boxcnyjEWc5fz8PImCAzQpnveic.png" alt="" /></p>
+<p><img src="/static//boxcnyjEWc5fz8PImCAzQpnveic.png" alt="" /></p>
 
 <p>ABDCD</p>
 
-<p><img src="/blog/static/boxcnN0lxZY07sJNLFWVCqMcVFh.png" alt="" /></p>
+<p><img src="/static//boxcnN0lxZY07sJNLFWVCqMcVFh.png" alt="" /></p>
 
 <p>CBBDA</p>
 
@@ -477,7 +477,7 @@
 
 <h3 id="课堂练习-4">课堂练习</h3>
 
-<p><img src="/blog/static/boxcnGJ0Ahzk5iWzf1dQoT3HJvb.png" alt="" /></p>
+<p><img src="/static//boxcnGJ0Ahzk5iWzf1dQoT3HJvb.png" alt="" /></p>
 
 <p>ADA</p>
 
@@ -487,37 +487,37 @@
 
 <h3 id="原理">原理</h3>
 
-<p><img src="/blog/static/boxcnGvdCLHAk5SSkEKNrjtlDCe.png" alt="" /></p>
+<p><img src="/static//boxcnGvdCLHAk5SSkEKNrjtlDCe.png" alt="" /></p>
 
 <h3 id="功能测试工具特性要求">功能测试工具特性要求</h3>
 
-<p><img src="/blog/static/boxcnGu9lvvHLfwqM7rn6dtLZDb.png" alt="" /></p>
+<p><img src="/static//boxcnGu9lvvHLfwqM7rn6dtLZDb.png" alt="" /></p>
 
 <h3 id="性能测试工具特性要求">性能测试工具特性要求</h3>
 
-<p><img src="/blog/static/boxcnk5nY5vgEVYRLjqXqel7lZc.png" alt="" /></p>
+<p><img src="/static//boxcnk5nY5vgEVYRLjqXqel7lZc.png" alt="" /></p>
 
 <h3 id="课堂练习-5">课堂练习</h3>
 
-<p><img src="/blog/static/boxcn4Q08CHsDktwl1zOg4DBOCc.png" alt="" /></p>
+<p><img src="/static//boxcn4Q08CHsDktwl1zOg4DBOCc.png" alt="" /></p>
 
 <p>DC<strong>D</strong>CB</p>
 
-<p><img src="/blog/static/boxcnnuPtnlmp4hxHAQVF8IusMg.png" alt="" /></p>
+<p><img src="/static//boxcnnuPtnlmp4hxHAQVF8IusMg.png" alt="" /></p>
 
 <h2 id="测试需求分析与测试计划">测试需求分析与测试计划</h2>
 
 <h3 id="测试目标与准则">测试目标与准则</h3>
 
-<p><img src="/blog/static/boxcnkV5SXbgnbUljjOUmUzr2Sc.png" alt="" /></p>
+<p><img src="/static//boxcnkV5SXbgnbUljjOUmUzr2Sc.png" alt="" /></p>
 
 <h3 id="测试需求分析">测试需求分析</h3>
 
-<p><img src="/blog/static/boxcngEIEKRgIMdV2YSEAPnFyse.png" alt="" /></p>
+<p><img src="/static//boxcngEIEKRgIMdV2YSEAPnFyse.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcndKa2zuSmhptvR3IYdUYttf.png" alt="" /></p>
+<p><img src="/static//boxcndKa2zuSmhptvR3IYdUYttf.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnXTLscCvViYUKyegtPyQ9uc.png" alt="" /></p>
+<p><img src="/static//boxcnXTLscCvViYUKyegtPyQ9uc.png" alt="" /></p>
 
 <h3 id="测试项目估算与进度安排">测试项目估算与进度安排</h3>
 
@@ -525,7 +525,7 @@
   <li>依据</li>
 </ul>
 
-<p><img src="/blog/static/boxcn1FWIoA2wI0PBoWeMqPCYQh.png" alt="" /></p>
+<p><img src="/static//boxcn1FWIoA2wI0PBoWeMqPCYQh.png" alt="" /></p>
 
 <ul>
   <li>甘特图（进度安排）</li>
@@ -537,7 +537,7 @@
 
 <h3 id="课堂练习-6">课堂练习</h3>
 
-<p><img src="/blog/static/boxcnPVjqY1nI3N3hPKNG6pd4Fk.png" alt="" /></p>
+<p><img src="/static//boxcnPVjqY1nI3N3hPKNG6pd4Fk.png" alt="" /></p>
 
 <p>DBDAC</p>
 
@@ -549,7 +549,7 @@
 
 <h3 id="课堂练习-7">课堂练习</h3>
 
-<p><img src="/blog/static/boxcn3R5Umqdau2SLEwdSjzEYQe.png" alt="" /></p>
+<p><img src="/static//boxcn3R5Umqdau2SLEwdSjzEYQe.png" alt="" /></p>
 
 <p>DDDDC</p>
 :ET

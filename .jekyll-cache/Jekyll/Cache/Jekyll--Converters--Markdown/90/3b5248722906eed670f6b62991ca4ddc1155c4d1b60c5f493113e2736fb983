@@ -1,4 +1,4 @@
-I""�<h2 id="计算机网络和因特网">计算机网络和因特网</h2>
+I""�<h2 id="计算机网络和因特网">计算机网络和因特网</h2>
 
 <h3 id="计算机网络">计算机网络</h3>
 
@@ -30,7 +30,7 @@
   <li>标准</li>
 </ul>
 
-<p><img src="/blog/static/boxcnBst94zjaes0BvPos6GG9mh.png" alt="" /></p>
+<p><img src="/static//boxcnBst94zjaes0BvPos6GG9mh.png" alt="" /></p>
 
 <h3 id="网络边缘">网络边缘</h3>
 
@@ -178,7 +178,7 @@
   <li>排队时延可以是毫秒到微妙级</li>
 </ul>
 
-<p><img src="/blog/static/boxcngOsK6due2CGvjEuxsHJYMf.png" alt="" /></p>
+<p><img src="/static//boxcngOsK6due2CGvjEuxsHJYMf.png" alt="" /></p>
 
 <ol>
   <li>传输时延</li>
@@ -222,7 +222,7 @@
   <li>例题</li>
 </ol>
 
-<p><img src="/blog/static/boxcnhAEZjeZHUBRYD3NWOI6cWd.png" alt="" /></p>
+<p><img src="/static//boxcnhAEZjeZHUBRYD3NWOI6cWd.png" alt="" /></p>
 
 <h3 id="协议层及其服务模型">协议层及其服务模型</h3>
 
@@ -230,7 +230,7 @@
   <li>ISO/OSI 七层参考模型</li>
 </ol>
 
-<p><img src="/blog/static/boxcneIRdsTncwxl4w69vlDGDfM.png" alt="" /></p>
+<p><img src="/static//boxcneIRdsTncwxl4w69vlDGDfM.png" alt="" /></p>
 
 <ul>
   <li>开放系统互连 (OSI)参考模型是由国际标准化组织 (ISO) 于 1984 年提出的分层网络体系结构模型</li>
@@ -244,7 +244,7 @@
   <li>TCP/IP 参考模型</li>
 </ol>
 
-<p><img src="/blog/static/boxcnYMim8gREbCahfJwO64UJ1c.png" alt="" /></p>
+<p><img src="/static//boxcnYMim8gREbCahfJwO64UJ1c.png" alt="" /></p>
 
 <p>这里的应用层 = 应用层 + 表示层 + 会话层</p>
 
@@ -260,7 +260,7 @@
   <li>物理层 physical: 物理介质上的比特传送</li>
 </ul>
 
-<p><img src="/blog/static/boxcnpOhg2PanVlOv2P9opnnaod.png" alt="" /></p>
+<p><img src="/static//boxcnpOhg2PanVlOv2P9opnnaod.png" alt="" /></p>
 
 <h3 id="攻击威胁下的网络">攻击威胁下的网络</h3>
 
@@ -446,13 +446,13 @@
   <li>递归查询</li>
 </ol>
 
-<p><img src="/blog/static/boxcnxZSq6yw3VGEPHziUDAVM8b.png" alt="" /></p>
+<p><img src="/static//boxcnxZSq6yw3VGEPHziUDAVM8b.png" alt="" /></p>
 
 <ol>
   <li>迭代查询</li>
 </ol>
 
-<p><img src="/blog/static/boxcncMeuhs7Ekf10aD8eZDpmze.png" alt="" /></p>
+<p><img src="/static//boxcncMeuhs7Ekf10aD8eZDpmze.png" alt="" /></p>
 
 <ol>
   <li>DNS 缓存和权威 DNS 记录更新</li>
@@ -911,9 +911,9 @@
   <li>链路状态路由算法 LS</li>
 </ul>
 
-<p><img src="/blog/static/boxcnZ2h0KlQAvkQCol5L8qkpPe.png" alt="" /></p>
+<p><img src="/static//boxcnZ2h0KlQAvkQCol5L8qkpPe.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnYwa1unKTxzqx6f73Gftlnd.png" alt="" /></p>
+<p><img src="/static//boxcnYwa1unKTxzqx6f73Gftlnd.png" alt="" /></p>
 
 <ul>
   <li>分布式路由算法</li>
@@ -1158,13 +1158,13 @@
   <li>媒体访问控制（MAC）子层</li>
 </ol>
 
-<p><img src="/blog/static/boxcnsg9LS4eonYYBGooNjLo8we.png" alt="" /></p>
+<p><img src="/static//boxcnsg9LS4eonYYBGooNjLo8we.png" alt="" /></p>
 
 <ol>
   <li>帧结构</li>
 </ol>
 
-<p><img src="/blog/static/boxcnErlX1FXIYuOFxt5Xjwhn2g.png" alt="" /></p>
+<p><img src="/static//boxcnErlX1FXIYuOFxt5Xjwhn2g.png" alt="" /></p>
 
 <ol>
   <li>链路层交换机</li>
@@ -1202,11 +1202,11 @@
 
 <h4 id="求时间">求时间</h4>
 
-<p><img src="/blog/static/boxcnc5xu0enDUH8Ky0oBGlst2f.png" alt="" /></p>
+<p><img src="/static//boxcnc5xu0enDUH8Ky0oBGlst2f.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnp3kpKpgwQOBDLr80DsYVmg.png" alt="" /></p>
+<p><img src="/static//boxcnp3kpKpgwQOBDLr80DsYVmg.png" alt="" /></p>
 
-<p><img src="/blog/static/boxcnmWtWwvKTwTrOK0RL7iloqc.png" alt="" /></p>
+<p><img src="/static//boxcnmWtWwvKTwTrOK0RL7iloqc.png" alt="" /></p>
 
 <p>The time to transmit an object of size L over a link or rate R is L/R. The average time is the average size of the object divided by R:</p>
 
