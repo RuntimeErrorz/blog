@@ -9,7 +9,7 @@ tags: Hadoop 大数据
 1. ## 说在前面
 
    别在Windows下装这个，超级麻烦的。如果大佬装成功了可以出个教程。
-2. ## 下载 `Hadoop`
+2. ## 下载 Hadoop
 
    [下载（中科大镜像站）](https://mirrors.ustc.edu.cn/apache/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz)不知道为什么清华镜像站封了我的IP？
 3. ## 安装配置SSH免密登录
