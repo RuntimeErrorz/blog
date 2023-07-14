@@ -12,7 +12,7 @@ tags: 深度估计
 2. SOTA Results, 超过有监督的单帧架构
 3. Attention-based matching fuction is transferalbe across datasets.
 ## 2. Network 
-![1689325433768](image/2023-06-15-depthformer/1689325433768.png)
+![1689325433768](/static//1689325433768.png)
 上图为本文的网络架构，下面的图是ManyDepth的网络架构。
 可以看到整体结构还是比较相似的，在补充材料中也说了是C取的是t-1，ManyDepth还把PostCNN标注出来了。
 
@@ -22,17 +22,17 @@ tags: 深度估计
 - context-adjust refinement：在最后的深度估计层，经过优化的cost volume特征与原图的RGB特征融合后一起解码深度信息。这可以增加深度的context信息。
 Single-Frame Encoder的应用也是类似的。
 ### 2.1 CostVolume的生成：
-![1689325600099](image/2023-06-15-depthformer/1689325600099.png)
-![1689325651066](image/2023-06-15-depthformer/1689325651066.png)
+![1689325600099](/static//1689325600099.png)
+![1689325651066](/static//1689325651066.png)
 这里的epipolar sampling指的是，t上的一个点，对应了多种深度D，因此C_{t->c}的shape为：H/4*W/4*C*D，（这里的C其实是t-1）
 
 最终的注意力值被用来填充交叉注意力成本量At→c，这是一个H/4×W/4×D的结构，编码Ft中的每个特征与其在Ct→c中的匹配候选人之间的相似度。
 
 含义为：对于像素 (i, j)，对于 P 中的每个 d，正确深度为 d 的可能性是多少
 ### 2.2 Cross-Attention Cost Volume的优势
-![1689325858302](image/2023-06-15-depthformer/1689325858302.png)
+![1689325858302](/static//1689325858302.png)
 ### 2.3 Cost Volume的解码
-![1689326041518](image/2023-06-15-depthformer/1689326041518.png)
+![1689326041518](/static//1689326041518.png)
 取平均值避免多峰分布。(ref中为：winner-take-all approach)
 
 但是这样的深度缺乏上下文联系（交叉注意力成本量是在极线上进行回归的），所以采用了上下文调整层来细化深度值。context-adjust refinement：在最后的深度估计层，经过优化的cost volume特征与原图的RGB特征融合后一起解码深度信息。这可以增加深度的context信息。
