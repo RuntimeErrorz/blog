@@ -3,7 +3,7 @@ layout: post
 title: 软件安全复习参考
 subtitle: 背就完了
 author: RuntimeEroor
-categories: 学业
+categories: 课程
 tags: 软件安全
 ---
 # 计算环境与软件安全

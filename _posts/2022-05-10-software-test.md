@@ -3,7 +3,7 @@ layout: post
 title: 软件测试复习参考
 subtitle: 背就完事
 author: RuntimeEroor
-categories: 学业
+categories: 课程
 tags: 软件测试
 ---
 # 软件测试

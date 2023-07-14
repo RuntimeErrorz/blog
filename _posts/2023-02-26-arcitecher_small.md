@@ -3,7 +3,7 @@ layout: post
 title: 软件架构设计小题
 subtitle: 死记硬背
 author: RuntimeEroor
-categories: 学业
+categories: 课程
 tags: 软件架构设计
 ---
 1. 信息系统的组成部分包括 以上均是
