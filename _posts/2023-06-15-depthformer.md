@@ -3,7 +3,7 @@ layout: post
 title: Multi-Frame Self-Supervised Depth with Transformers
 subtitle: 致敬ManyDepth！
 author: RuntimeEroor
-categories: CV
+categories: 深度学习
 tags: 深度估计
 ---
 ## 1. Contribution
