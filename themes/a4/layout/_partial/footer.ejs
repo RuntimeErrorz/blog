@@ -1,0 +1,51 @@
+<div class="footer">
+        <span> 
+            <%= theme.footerLink.info %> 
+
+            <% for (name in theme.footerLink) { %>
+                <% if(name != 'info') { %>
+                    / <a href="<%- url_for(theme.footerLink[name]) %>"> <%= name %> </a>
+                <% } %>
+
+            <% } %>
+        </span>
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+        
+            <span><%= theme.post.footer %></span>
+            <% if(theme.post.themeInfo) { %>
+                <span class="footer-last-span-right">
+                    <i>本站曾由<a href="https://jekyllrb.com/">Jekyell</a>驱动｜使用<a href="https://github.com/jeffreytse/jekyll-theme-yat">Jekyll-theme-YAT</a>主题
+                    </i>
+                    <br />
+                    <i>本站现由<a href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题
+                    </i>
+                </span>
+            <% } %>
+</div>
+
+<% if(theme.cdn.enable) { %>
+    <% if(theme.cdn.choose == "aliyun") { %>
+        <%- css('https://npm.elemecdn.com/hexo-theme-a4@latest/source/css/a11y-dark.min.css') %>
+        <%- js('https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/highlight.min.js') %>
+        <%- js('https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js') %>
+    <% } else if(theme.cdn.choose == "jsdelivr") { %>
+        <%- css('https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css') %>
+        <%- js('https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js') %>
+        <%- js('https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js') %>
+    <% } else if(theme.cdn.choose == "unpkg") { %>
+        <%- css('https://npm.onmicrosoft.cn/hexo-theme-a4@latest/source/css/a11y-dark.min.css') %>
+        <%- js('https://npm.onmicrosoft.cn/hexo-theme-a4@latest/source/js/highlight.min.js') %>
+        <%- js('https://npm.onmicrosoft.cn/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js') %>
+    <% } %>
+<% } else { %>
+    <%- css('css/a11y-dark.min.css') %>
+    <%- js('js/highlight.min.js') %>
+    <%- js('js/highlightjs-line-numbers.js') %>
+<% } %>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
