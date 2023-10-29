@@ -4,7 +4,7 @@ title: ! 'DualRefine: Self-Supervised Depth and Pose Estimation Through Iterativ
 subtitle: 对RAFT的精妙模仿！
 author: RuntimeEroor
 categories: AI
-tags: [深度估计, CVPR2023]
+tags: [Paper, 深度估计, CVPR]
 date: 2023-07-20
 ---
-TODO!
+{% pdf /blog/pdf/dualrefine.pdf %}
