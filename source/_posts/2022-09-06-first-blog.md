@@ -3,7 +3,7 @@ layout: post
 title: 初试Jekyll
 subtitle: 受到白忠建老师的启发
 author: RuntimeEroor
-categories: 软件配置
+categories: config
 tags: jekyll
 date: 2022-09-06
 ---

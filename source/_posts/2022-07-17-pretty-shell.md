@@ -3,7 +3,7 @@ layout: post
 title: 美化你的终端
 subtitle: 受到Tmoe-zsh的启发
 author: RuntimeEroor
-categories: 软件配置
+categories: config
 tags: Powershell
 date: 2022-07-17
 ---

@@ -3,7 +3,7 @@ layout: post
 title: 安装Hadoop
 subtitle: MapReduce!
 author: RuntimeEroor
-categories: 软件配置
+categories: config
 tags: Hadoop 大数据
 date: 2022-09-08
 ---
