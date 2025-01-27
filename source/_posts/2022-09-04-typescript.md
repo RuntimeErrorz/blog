@@ -4,7 +4,7 @@ title: Typescript入门
 subtitle: 类型体操！
 author: RuntimeEroor
 categories: 前端
-tags: Three.js
+tags: Threejs
 date: 2022-09-04
 ---
 # 安装tsc和ts-node
