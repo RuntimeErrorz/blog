@@ -115,58 +115,109 @@ clear
 # 配置Windows Terminal
 
 ```json
-"profiles": 
-    {
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{b453ae62-4e3d-5e58-b989-0a998ec441b9}",
+    "keybindings": [
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.FindText",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu": [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": {
         "defaults": {},
-        "list": 
-        [
+        "list": [
             {
-                "closeOnExit": "graceful",
-                "colorScheme": "Solarized Dark Higher Contrast",
-                "commandline": "C:/Program Files/PowerShell/7/pwsh.exe -nologo",
+                "font": {
+                    "face": "Hack Nerd Font Mono",
+                    "size": 12
+                },
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Hack Nerd Font",
-                    "size": 11
-                },
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "colorScheme": "Solarized Dark Higher Contrast",
+                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b9}",
                 "hidden": false,
-                "historySize": 9001,
-                "icon": "C:/Program Files/PowerShell/7/assets/Powershell_av_colors.ico",
-                "name": "PowerShell 7.2.0",
-                "opacity": 100,
-                "padding": "5, 5, 20, 25",
-                "snapOnInput": true,
-                "source": "Windows.Terminal.PowershellCore",
-                "startingDirectory": ".",
-                "tabTitle": "PowerShell",
-                "useAcrylic": false
+                "name": "PowerShell 7"
             },
             {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "Command Prompt"
+                "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
             },
             {
-                "colorScheme": "Campbell",
-                "commandline": "C:\\Windows\\system32\\wsl.exe -d Ubuntu-20.04",
-                "font": 
-                {
-                    "face": "Hack Nerd Font"
-                },
-                "guid": "{4ff38782-a8f1-4767-a657-cdd0c327774f}",
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "Ubuntu-20.04",
-                "startingDirectory": "~"
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "name": "Git Bash",
+                "source": "Git"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
             }
         ]
     },
+    "schemes": [
+        {
+            "background": "#001E27",
+            "black": "#002831",
+            "blue": "#2176C7",
+            "brightBlack": "#006488",
+            "brightBlue": "#178EC8",
+            "brightCyan": "#00B39E",
+            "brightGreen": "#51EF84",
+            "brightPurple": "#E24D8E",
+            "brightRed": "#F5163B",
+            "brightWhite": "#FCF4DC",
+            "brightYellow": "#B27E28",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#259286",
+            "foreground": "#9CC2C3",
+            "green": "#6CBE6C",
+            "name": "Solarized Dark Higher Contrast",
+            "purple": "#C61C6F",
+            "red": "#D11C24",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EAE3CB",
+            "yellow": "#A57706"
+        },
+    ],
+    "themes": []
+}
 ```
